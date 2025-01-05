@@ -1,59 +1,40 @@
-// Navigation functionality
-class Navigation {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        // Mobile menu toggle
-        const menuToggle = document.querySelector('.menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
+// Main initialization sequence
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('Starting initialization sequence...');
+    
+    try {
+        // First, load components (header, footer, cart sidebar)
+        await loadComponents();
+        console.log('Components loaded successfully');
         
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.toggle('active');
-            });
-        }
-
-        // Dropdown menus
-        document.querySelectorAll('.has-dropdown').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.querySelector('.dropdown-menu').style.display = 'block';
-            });
-            
-            item.addEventListener('mouseleave', function() {
-                this.querySelector('.dropdown-menu').style.display = 'none';
-            });
-        });
-    }
-}
-
-// Search functionality
-class Search {
-    constructor() {
-        this.init();
-    }
-
-    init() {
-        const searchToggle = document.querySelector('.search-toggle');
-        const searchForm = document.querySelector('.search-form');
+        // Wait a bit to ensure DOM is updated
+        await new Promise(resolve => setTimeout(resolve, 500));
         
-        if (searchToggle && searchForm) {
-            searchToggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                searchForm.classList.toggle('active');
-            });
+        // Initialize cart if not already initialized
+        if (!window.cartInstance?.initialized) {
+            window.cartInstance = new Cart();
+            await window.cartInstance.init();
+            console.log('Cart initialized successfully');
         }
+        
+        // Initialize page-specific functionality
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        console.log('Current page:', currentPage);
+        
+        switch (currentPage) {
+            case 'checkout.html':
+                // Checkout page will initialize itself
+                break;
+            case 'shop.html':
+                if (typeof Shop !== 'undefined') {
+                    window.shop = new Shop();
+                }
+                break;
+            // Add other page-specific initializations as needed
+        }
+        
+        console.log('Initialization sequence completed');
+    } catch (error) {
+        console.error('Error during initialization:', error);
     }
-
-    performSearch(query) {
-        // Implement search functionality
-        console.log('Searching for:', query);
-    }
-}
-
-// Initialize functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    new Navigation();
-    new Search();
 }); 

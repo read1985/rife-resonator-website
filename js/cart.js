@@ -40,9 +40,11 @@ class Cart {
     async waitForElements() {
         return new Promise((resolve, reject) => {
             let attempts = 0;
-            const maxAttempts = 10;
+            const maxAttempts = 20;
             
             const checkElements = () => {
+                console.log('Checking cart elements, attempt:', attempts + 1);
+                
                 this.cartToggle = document.querySelector('.cart-link');
                 this.cartSidebar = document.querySelector('.cart-sidebar');
                 this.cartItems = document.querySelector('.cart-items');
@@ -53,14 +55,36 @@ class Cart {
                 this.cartTotal = document.querySelector('.cart-total');
                 this.checkoutButton = document.querySelector('.cart-sidebar .checkout-button');
                 
+                // Log which elements are missing
+                const missingElements = {
+                    cartToggle: !this.cartToggle,
+                    cartSidebar: !this.cartSidebar,
+                    cartItems: !this.cartItems,
+                    cartCount: !this.cartCount,
+                    cartSubtotal: !this.cartSubtotal,
+                    cartShipping: !this.cartShipping,
+                    cartTax: !this.cartTax,
+                    cartTotal: !this.cartTotal,
+                    checkoutButton: !this.checkoutButton
+                };
+                
+                const missing = Object.entries(missingElements)
+                    .filter(([_, isMissing]) => isMissing)
+                    .map(([name]) => name);
+                
+                if (missing.length > 0) {
+                    console.log('Missing elements:', missing);
+                }
+                
                 if (this.cartToggle && this.cartSidebar && this.cartItems && 
                     this.cartCount && this.cartSubtotal && this.cartShipping && 
                     this.cartTax && this.cartTotal && this.checkoutButton) {
-                    console.log('Cart elements found, initializing...');
+                    console.log('All cart elements found');
                     resolve();
                 } else {
                     attempts++;
                     if (attempts >= maxAttempts) {
+                        console.error('Could not find cart elements after', maxAttempts, 'attempts');
                         reject(new Error('Could not find cart elements'));
                         return;
                     }

@@ -25,25 +25,31 @@ class Checkout {
 
     async waitForComponents() {
         return new Promise((resolve, reject) => {
+            let attempts = 0;
+            const maxAttempts = 20; // Increased from 10
+            
             const checkComponents = () => {
                 const header = document.querySelector('.top-header');
                 const cartSidebar = document.querySelector('.cart-sidebar');
+                const cartInitialized = window.cartInstance?.initialized;
                 
                 console.log('Checking components:', {
+                    attempt: attempts + 1,
                     header: !!header,
                     cartSidebar: !!cartSidebar,
-                    cartInstance: window.cartInstance?.initialized
+                    cartInstance: cartInitialized
                 });
 
-                if (header && cartSidebar && window.cartInstance?.initialized) {
+                if (header && cartSidebar && cartInitialized) {
                     console.log('Components loaded and cart initialized');
                     resolve();
                 } else {
-                    if (this.cartLoadAttempts >= this.maxCartLoadAttempts) {
+                    attempts++;
+                    if (attempts >= maxAttempts) {
+                        console.error('Components failed to load after', maxAttempts, 'attempts');
                         reject(new Error('Components failed to load'));
                         return;
                     }
-                    this.cartLoadAttempts++;
                     setTimeout(checkComponents, 1000);
                 }
             };
@@ -54,7 +60,8 @@ class Checkout {
 
     async waitForElements() {
         // Reset attempt counter for elements check
-        this.cartLoadAttempts = 0;
+        let attempts = 0;
+        const maxAttempts = 20; // Increased from 10
         
         return new Promise((resolve, reject) => {
             const checkElements = () => {
@@ -76,8 +83,8 @@ class Checkout {
                     .map(([key]) => key);
                 
                 console.log('Checking elements:', {
-                    attempt: this.cartLoadAttempts + 1,
-                    maxAttempts: this.maxCartLoadAttempts,
+                    attempt: attempts + 1,
+                    maxAttempts: maxAttempts,
                     missing: missingElements
                 });
 
@@ -86,7 +93,8 @@ class Checkout {
                     this.elements = elements;
                     resolve();
                 } else {
-                    if (this.cartLoadAttempts >= this.maxCartLoadAttempts) {
+                    attempts++;
+                    if (attempts >= maxAttempts) {
                         console.error('Failed to find elements:', missingElements);
                         // Don't redirect immediately if in debug mode
                         if (!localStorage.getItem('debug')) {
@@ -95,10 +103,9 @@ class Checkout {
                                 window.location.href = 'shop.html';
                             }, 5000);
                         }
-                        reject(new Error('Checkout initialization timed out'));
+                        reject(new Error('Failed to find elements'));
                         return;
                     }
-                    this.cartLoadAttempts++;
                     setTimeout(checkElements, 1000);
                 }
             };
