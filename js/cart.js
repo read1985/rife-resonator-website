@@ -343,12 +343,7 @@ class Cart {
         // Subtotal
         this.total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         if (this.cartSubtotal) {
-            this.cartSubtotal.innerHTML = `
-                <div class="total-line">
-                    <span>Subtotal:</span>
-                    <span>$${this.total.toFixed(2)}</span>
-                </div>
-            `;
+            this.cartSubtotal.textContent = `$${this.total.toFixed(2)}`;
         }
 
         // Only show shipping if there are items in cart
@@ -358,7 +353,7 @@ class Cart {
             if (shippingLine) {
                 if (this.items.length > 0) {
                     shippingLine.style.display = 'flex';
-                    this.cartShipping.innerHTML = `$${this.shipping.toFixed(2)}`;
+                    this.cartShipping.textContent = `$${this.shipping.toFixed(2)}`;
                 } else {
                     shippingLine.style.display = 'none';
                 }
@@ -368,12 +363,12 @@ class Cart {
         // Total
         const finalTotal = this.total + this.shipping;
         if (this.cartTotal) {
-            this.cartTotal.innerHTML = `
-                <div class="total-line grand-total">
-                    <span>Total:</span>
-                    <span>$${finalTotal.toFixed(2)}</span>
-                </div>
-            `;
+            this.cartTotal.textContent = `$${finalTotal.toFixed(2)}`;
+        }
+
+        // Update checkout button state
+        if (this.checkoutButton) {
+            this.checkoutButton.disabled = this.items.length === 0;
         }
     }
 

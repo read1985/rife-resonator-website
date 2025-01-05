@@ -10,7 +10,7 @@
     <script src="js/cart.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="top-bar">
             <a href="mailto:info@riferesonator.com">info@riferesonator.com</a>
         </div>
@@ -48,6 +48,8 @@
             </div>
         </nav>
     </header>
+
+    <div id="cart-container"></div>
 
     <main class="legality-page">
         <h1>Legal Information</h1>
@@ -104,37 +106,21 @@
         </section>
     </main>
 
-    <footer>
-        <div class="newsletter">
-            <h4>NEWSLETTER</h4>
-            <p>Sign up for our email to get the latest news</p>
-            <form id="newsletter-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <span class="error">Required field!</span>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email" required>
-                    <span class="error">Required field!</span>
-                </div>
-                <button type="submit">Sign up</button>
-            </form>
+            </div>
         </div>
-
-        <div class="footer-links">
-            <h4>INFORMATION</h4>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="downloads.html">PDF Downloads</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-
-        <div class="copyright">
-            <p>©2024. Rife Health. All Rights Reserved</p>
+        <div class="copyright-bar">
+            <p>&copy; 2023 Wave Technologies. All rights reserved.</p>
         </div>
     </footer>
 </body>
