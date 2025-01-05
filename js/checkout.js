@@ -96,26 +96,46 @@ class Checkout {
         });
     }
 
-    loadCartSummary() {
+    async loadCartSummary() {
         console.log('Starting loadCartSummary...');
         try {
             // Check localStorage directly
             const savedCart = localStorage.getItem('cart');
             console.log('Raw cart data from localStorage:', savedCart);
 
-            if (!window.cartInstance || !window.cartInstance.getCartData) {
+            // Wait for cart instance to be ready
+            if (!window.cartInstance || !window.cartInstance.initialized) {
                 console.log('Cart instance status:', {
                     windowCartInstance: window.cartInstance,
-                    hasGetDataMethod: window.cartInstance?.getCartData
+                    isInitialized: window.cartInstance?.initialized
                 });
                 if (this.cartLoadAttempts < this.maxCartLoadAttempts) {
                     console.log('Cart not ready, retrying...', this.cartLoadAttempts);
                     this.cartLoadAttempts++;
-                    setTimeout(() => this.loadCartSummary(), 1000); // Increased delay
+                    setTimeout(() => this.loadCartSummary(), 1000);
                     return;
                 } else {
                     throw new Error('Cart failed to initialize');
                 }
+            }
+
+            // Parse saved cart data
+            let parsedCart = null;
+            try {
+                parsedCart = JSON.parse(savedCart);
+                console.log('Parsed cart data:', parsedCart);
+            } catch (e) {
+                console.error('Error parsing cart data:', e);
+            }
+
+            // If we have saved cart data but cart instance is empty, reload the cart
+            if (parsedCart?.items?.length > 0 && window.cartInstance.items.length === 0) {
+                console.log('Reloading cart data from localStorage...');
+                window.cartInstance.items = parsedCart.items;
+                window.cartInstance.total = parsedCart.total;
+                window.cartInstance.shipping = parsedCart.shipping;
+                window.cartInstance.tax = parsedCart.tax;
+                window.cartInstance.updateCart();
             }
 
             const cartData = window.cartInstance.getCartData();
