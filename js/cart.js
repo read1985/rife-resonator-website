@@ -101,26 +101,35 @@ class Cart {
         
         // Cart toggle
         if (this.cartToggle) {
+            console.log('Setting up cart toggle');
             this.cartToggle.addEventListener('click', (e) => {
                 e.preventDefault();
                 this.toggleCart();
             });
+        } else {
+            console.error('Cart toggle not found');
         }
         
         // Close cart button
-        const closeCart = this.cartSidebar.querySelector('.close-cart');
+        const closeCart = this.cartSidebar?.querySelector('.close-cart');
         if (closeCart) {
+            console.log('Setting up close cart button');
             closeCart.addEventListener('click', () => this.closeCart());
+        } else {
+            console.error('Close cart button not found');
         }
         
         // Checkout button
         if (this.checkoutButton) {
+            console.log('Setting up checkout button');
             this.checkoutButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 if (!this.checkoutButton.disabled && this.items.length > 0) {
                     window.location.href = 'checkout.html';
                 }
             });
+        } else {
+            console.error('Checkout button not found');
         }
         
         // Add to cart buttons
@@ -129,7 +138,15 @@ class Cart {
         addToCartButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
-                this.addToCart(e.target.closest('.product-card, .product-details'));
+                e.stopPropagation();
+                console.log('Add to cart clicked');
+                const productCard = e.target.closest('.product-card, .product-details');
+                if (productCard) {
+                    console.log('Found product card:', productCard);
+                    this.addToCart(productCard);
+                } else {
+                    console.error('No product card found');
+                }
             });
         });
     }
@@ -153,22 +170,42 @@ class Cart {
     }
 
     addToCart(productElement) {
-        if (!productElement) return;
+        if (!productElement) {
+            console.error('No product element provided');
+            return;
+        }
         
-        const id = parseInt(productElement.dataset.productId) || Date.now();
-        const name = productElement.querySelector('h2, h3, .product-title').textContent;
-        const price = parseFloat(productElement.dataset.price || productElement.querySelector('.price').textContent.replace(/[^0-9.]/g, ''));
-        const image = productElement.querySelector('img').src;
+        console.log('Adding to cart, product element:', productElement);
+        
+        const titleElement = productElement.querySelector('.product-title');
+        const priceElement = productElement.querySelector('.price');
+        const imageElement = productElement.querySelector('img');
+        
+        if (!titleElement || !priceElement || !imageElement) {
+            console.error('Missing required product elements:', {
+                title: !titleElement,
+                price: !priceElement,
+                image: !imageElement
+            });
+            return;
+        }
+        
+        const id = parseInt(productElement.dataset.productId) || parseInt(productElement.dataset.id) || Date.now();
+        const name = titleElement.textContent.trim();
+        const price = parseFloat(productElement.dataset.price || priceElement.textContent.replace(/[^0-9.]/g, ''));
+        const image = imageElement.src;
         const quantity = 1;
         
-        console.log(`Adding to cart: ${quantity}x ${name} at $${price.toFixed(2)} each`);
+        console.log('Product details:', { id, name, price, image, quantity });
         
         // Check if item already exists in cart
         const existingItem = this.items.find(item => item.id === id);
         if (existingItem) {
             existingItem.quantity += quantity;
+            console.log('Updated existing item quantity:', existingItem);
         } else {
             this.items.push({ id, name, price, image, quantity });
+            console.log('Added new item to cart');
         }
         
         this.updateCart();

@@ -173,33 +173,40 @@ class Shop {
     renderProducts(products) {
         const productsGrid = document.querySelector('.products-grid');
         productsGrid.innerHTML = products.map(product => `
-            <div class="product-card" data-id="${product.id}">
+            <div class="product-card" data-id="${product.id}" data-price="${product.price}">
                 ${product.badge ? `<div class="product-badge ${product.badge}">${product.badge}</div>` : ''}
                 <img src="${product.image}" alt="${product.name}">
                 <div class="product-info">
-                    <h3>${product.name}</h3>
+                    <h3 class="product-title">${product.name}</h3>
                     <div class="product-rating">
                         ${this.generateRatingStars(product.rating)}
                         <span>(${product.reviewCount} reviews)</span>
                     </div>
-                    <p class="price">
-                        ${product.originalPrice ? `<span class="original-price">$${product.originalPrice.toFixed(2)}</span> ` : ''}
-                        $${product.price.toFixed(2)}
-                    </p>
+                    <div class="price-container">
+                        <p class="price">
+                            ${product.originalPrice ? `<span class="original-price">$${product.originalPrice.toFixed(2)}</span> ` : ''}
+                            $${product.price.toFixed(2)}
+                        </p>
+                    </div>
                     <p class="description">${product.description}</p>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <button class="add-to-cart-btn">Add to Cart</button>
                     <a href="product-${product.id}.html" class="view-details">View Details</a>
                 </div>
             </div>
         `).join('');
 
         // Reinitialize cart buttons
-        document.querySelectorAll('.add-to-cart').forEach(button => {
+        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
             button.addEventListener('click', (e) => {
-                const productId = e.target.closest('.product-card').dataset.id;
-                const product = this.products.find(p => p.id === parseInt(productId));
-                if (window.cart) {
-                    window.cart.addToCart({ target: e.target.closest('.product-card') });
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Add to cart clicked');
+                const productCard = e.target.closest('.product-card');
+                if (productCard && window.cartInstance) {
+                    console.log('Found product card:', productCard);
+                    window.cartInstance.addToCart(productCard);
+                } else {
+                    console.error('No product card or cart instance found');
                 }
             });
         });

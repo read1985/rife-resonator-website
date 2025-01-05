@@ -127,34 +127,43 @@ async function loadCartSidebar() {
 }
 
 async function loadFooter() {
-    const footerResponse = await fetch('components/footer.html');
-    if (!footerResponse.ok) {
-        console.log('Using fallback footer');
-        const footerElement = document.querySelector('footer');
-        if (footerElement) {
+    console.log('Loading footer...');
+    const footerElement = document.getElementById('footer');
+    if (!footerElement) {
+        console.error('Footer element not found');
+        return;
+    }
+
+    try {
+        const footerResponse = await fetch('components/footer.html');
+        if (!footerResponse.ok) {
+            console.log('Using fallback footer');
             footerElement.innerHTML = `
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="information.html">Information</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                <footer>
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="information.html">Information</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Wave Technologies. All rights reserved.</p>
-                </div>
+                    
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 Wave Technologies. All rights reserved.</p>
+                    </div>
+                </footer>
             `;
-        }
-    } else {
-        const footerContent = await footerResponse.text();
-        const footerElement = document.querySelector('footer');
-        if (footerElement) {
+        } else {
+            const footerContent = await footerResponse.text();
             footerElement.innerHTML = footerContent;
         }
+        console.log('Footer loaded successfully');
+    } catch (error) {
+        console.error('Error loading footer:', error);
+        throw error;
     }
 } 
