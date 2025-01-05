@@ -100,6 +100,7 @@ class Cart {
         console.log('Binding cart events');
         
         // Cart toggle
+        this.cartToggle = document.querySelector('.cart-link');
         if (this.cartToggle) {
             console.log('Setting up cart toggle');
             this.cartToggle.addEventListener('click', (e) => {
@@ -111,6 +112,7 @@ class Cart {
         }
         
         // Close cart button
+        this.cartSidebar = document.querySelector('.cart-sidebar');
         const closeCart = this.cartSidebar?.querySelector('.close-cart');
         if (closeCart) {
             console.log('Setting up close cart button');
@@ -120,6 +122,7 @@ class Cart {
         }
         
         // Checkout button
+        this.checkoutButton = document.querySelector('.cart-sidebar .checkout-button');
         if (this.checkoutButton) {
             console.log('Setting up checkout button');
             this.checkoutButton.addEventListener('click', (e) => {
@@ -133,14 +136,14 @@ class Cart {
         }
         
         // Add to cart buttons
-        const addToCartButtons = document.querySelectorAll('.add-to-cart, .add-to-cart-btn');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
         console.log('Found add to cart buttons:', addToCartButtons.length);
         addToCartButtons.forEach(button => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Add to cart clicked');
-                const productCard = e.target.closest('.product-card, .product-details');
+                const productCard = e.target.closest('.product-card');
                 if (productCard) {
                     console.log('Found product card:', productCard);
                     this.addToCart(productCard);
@@ -148,6 +151,22 @@ class Cart {
                     console.error('No product card found');
                 }
             });
+        });
+
+        // Also bind to document for dynamically added buttons
+        document.addEventListener('click', (e) => {
+            if (e.target.matches('.add-to-cart-btn') || e.target.closest('.add-to-cart-btn')) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('Add to cart clicked (delegated)');
+                const productCard = e.target.closest('.product-card');
+                if (productCard) {
+                    console.log('Found product card:', productCard);
+                    this.addToCart(productCard);
+                } else {
+                    console.error('No product card found');
+                }
+            }
         });
     }
 

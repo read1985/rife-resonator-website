@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log('Components loaded successfully');
         
         // Wait a bit to ensure DOM is updated
-        await new Promise(resolve => setTimeout(resolve, 500));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         
         // Initialize cart if not already initialized
         if (!window.cartInstance?.initialized) {
@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             window.cartInstance = new Cart();
             await window.cartInstance.init();
             console.log('Cart initialized successfully');
+            
+            // Re-bind cart events after initialization
+            console.log('Re-binding cart events...');
+            window.cartInstance.bindEvents();
         }
         
         // Initialize page-specific functionality
@@ -33,6 +37,11 @@ document.addEventListener('DOMContentLoaded', async () => {
                 console.log('Initializing shop page...');
                 if (typeof Shop !== 'undefined') {
                     window.shop = new Shop();
+                    // Re-bind cart events after shop initialization
+                    if (window.cartInstance?.initialized) {
+                        console.log('Re-binding cart events after shop init...');
+                        window.cartInstance.bindEvents();
+                    }
                 }
                 break;
                 

@@ -194,22 +194,8 @@ class Shop {
                 </div>
             </div>
         `).join('');
-
-        // Reinitialize cart buttons
-        document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Add to cart clicked');
-                const productCard = e.target.closest('.product-card');
-                if (productCard && window.cartInstance) {
-                    console.log('Found product card:', productCard);
-                    window.cartInstance.addToCart(productCard);
-                } else {
-                    console.error('No product card or cart instance found');
-                }
-            });
-        });
+        
+        console.log('Products rendered, cart events will be handled by cart instance');
     }
 
     generateRatingStars(rating) {
