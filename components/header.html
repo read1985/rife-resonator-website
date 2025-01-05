@@ -1,8 +1,4 @@
 <header>
-    <div class="announcement-bar">
-        <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
-    </div>
-    
     <div class="top-header">
         <div class="container">
             <div class="logo">
@@ -10,21 +6,42 @@
                     <img src="images/logo.png" alt="Wave Technologies Logo">
                 </a>
             </div>
-            <nav class="main-nav">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="information.html">Information</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="header-icons">
-                    <a href="#" class="cart-link">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">0</span>
-                    </a>
-                </div>
-            </nav>
+            <div class="contact">
+                <a href="mailto:info@riferesonator.com">
+                    <i class="fas fa-envelope"></i>
+                    info@riferesonator.com
+                </a>
+            </div>
         </div>
     </div>
+    
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="shop.html">Shop</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="shop.html?category=resonators">Resonators</a></li>
+                        <li><a href="shop.html?category=accessories">Accessories</a></li>
+                        <li><a href="shop.html?category=packages">Packages</a></li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <a href="information.html">Information</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="treatments-and-frequencies.html">Treatments and Frequencies</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-icons">
+                <a href="#" class="cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
 </header> 
