@@ -253,7 +253,7 @@ class Checkout {
     }
 
     async handleSubmit(e) {
-        e.preventDefault();
+            e.preventDefault();
         const submitButton = this.elements.submitButton;
         const spinner = document.getElementById('spinner');
 
@@ -303,13 +303,13 @@ class Checkout {
 
             // Payment successful
             window.cartInstance.clearCart();
-            window.location.href = 'order-confirmation.html';
+                    window.location.href = 'order-confirmation.html';
 
-        } catch (error) {
+            } catch (error) {
             console.error('Payment error:', error);
             this.showError(error.message);
-        } finally {
-            submitButton.disabled = false;
+            } finally {
+                submitButton.disabled = false;
             spinner.classList.add('hidden');
         }
     }

@@ -345,23 +345,37 @@ class Cart {
         // Subtotal
         this.total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         if (this.cartSubtotal) {
-            this.cartSubtotal.textContent = `$${this.total.toFixed(2)}`;
+            this.cartSubtotal.innerHTML = `
+                <div class="total-line">
+                    <span>Subtotal:</span>
+                    <span>$${this.total.toFixed(2)}</span>
+                </div>
+            `;
         }
 
         // Only show shipping if there are items in cart
         this.shipping = this.items.length > 0 ? 50 : 0;
         if (this.cartShipping) {
-            if (this.items.length > 0) {
-                this.cartShipping.textContent = `$${this.shipping.toFixed(2)} (Flat Rate Shipping)`;
-            } else {
-                this.cartShipping.textContent = '';
+            const shippingLine = this.cartShipping.closest('.shipping-line');
+            if (shippingLine) {
+                if (this.items.length > 0) {
+                    shippingLine.style.display = 'flex';
+                    this.cartShipping.innerHTML = `$${this.shipping.toFixed(2)}`;
+                } else {
+                    shippingLine.style.display = 'none';
+                }
             }
         }
 
         // Total
-        const finalTotal = this.total + (this.items.length > 0 ? this.shipping : 0);
+        const finalTotal = this.total + this.shipping;
         if (this.cartTotal) {
-            this.cartTotal.textContent = `$${finalTotal.toFixed(2)}`;
+            this.cartTotal.innerHTML = `
+                <div class="total-line grand-total">
+                    <span>Total:</span>
+                    <span>$${finalTotal.toFixed(2)}</span>
+                </div>
+            `;
         }
     }
 
