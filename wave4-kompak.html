@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Scripts -->
     <script src="js/cart.js" defer></script>
     <script src="js/components.js" defer></script>
-    <script src="js/main.js" defer></script>
     <script src="js/product-detail.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
-    <header></header>
+    <header id="header"></header>
 
     <main class="product-page">
         <div class="container">
@@ -24,7 +25,7 @@
                 <span>Wave4 Kompak</span>
             </div>
 
-            <div class="product-details">
+            <div class="product-details" data-product-id="2" data-price="1495.00">
                 <div class="product-gallery">
                     <div class="main-image">
                         <img src="images/Wave4_Kompak_4-5863825.jpg" alt="Wave4 Kompak" id="main-product-image">
@@ -36,7 +37,7 @@
                 </div>
 
                 <div class="product-info">
-                    <h1>Wave4 Kompak</h1>
+                    <h1 class="product-title">Wave4 Kompak</h1>
                     <div class="price-container">
                         <span class="original-price">$1,695.00</span>
                         <p class="price">$1,495.00</p>
