@@ -125,7 +125,7 @@ class Cart {
                 this.toggleCart();
             });
         } else {
-            console.error('Cart toggle not found');
+            console.log('Cart toggle not found');
         }
         
         // Close cart button
@@ -135,7 +135,7 @@ class Cart {
             console.log('Setting up close cart button');
             closeCart.addEventListener('click', () => this.closeCart());
         } else {
-            console.error('Close cart button not found');
+            console.log('Close cart button not found');
         }
         
         // Checkout button
@@ -149,11 +149,11 @@ class Cart {
                 }
             });
         } else {
-            console.error('Checkout button not found');
+            console.log('Checkout button not found');
         }
         
-        // Add to cart buttons
-        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+        // Add to cart buttons - handle both button types
+        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn, .add-to-cart');
         console.log('Found add to cart buttons:', addToCartButtons.length);
         addToCartButtons.forEach(button => {
             button.addEventListener('click', (e) => {
@@ -172,7 +172,8 @@ class Cart {
 
         // Also bind to document for dynamically added buttons
         document.addEventListener('click', (e) => {
-            if (e.target.matches('.add-to-cart-btn') || e.target.closest('.add-to-cart-btn')) {
+            if (e.target.matches('.add-to-cart-btn, .add-to-cart') || 
+                e.target.closest('.add-to-cart-btn, .add-to-cart')) {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Add to cart clicked (delegated)');
@@ -213,7 +214,10 @@ class Cart {
         
         console.log('Adding to cart, product element:', productElement);
         
-        const titleElement = productElement.querySelector('.product-title');
+        // Try to find elements in both structures
+        const titleElement = productElement.querySelector('.product-title') || 
+                           productElement.querySelector('.product-info h3 a') ||
+                           productElement.querySelector('.product-info h3');
         const priceElement = productElement.querySelector('.price');
         const imageElement = productElement.querySelector('img');
         
@@ -226,9 +230,12 @@ class Cart {
             return;
         }
         
-        const id = parseInt(productElement.dataset.productId) || parseInt(productElement.dataset.id) || Date.now();
+        const id = parseInt(productElement.dataset.productId) || 
+                  parseInt(productElement.dataset.id) || 
+                  Date.now();
         const name = titleElement.textContent.trim();
-        const price = parseFloat(productElement.dataset.price || priceElement.textContent.replace(/[^0-9.]/g, ''));
+        const price = parseFloat(productElement.dataset.price || 
+                               priceElement.textContent.replace(/[^0-9.]/g, ''));
         const image = imageElement.src;
         const quantity = 1;
         
