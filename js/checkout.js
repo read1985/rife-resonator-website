@@ -1,25 +1,38 @@
 class Checkout {
     constructor() {
-        console.log('Initializing checkout...');
+        console.log('Creating checkout instance...');
         this.cartLoadAttempts = 0;
-        this.maxCartLoadAttempts = 10;
-        this.init();
+        this.maxCartLoadAttempts = 20;
     }
 
     async init() {
+        console.log('Initializing checkout...');
         try {
             // Wait for components to load first
             await this.waitForComponents();
+            console.log('Components loaded successfully');
+            
             // Then wait for elements
             await this.waitForElements();
+            console.log('Elements loaded successfully');
+            
             // Setup Stripe
             this.setupStripe();
+            console.log('Stripe setup complete');
+            
             // Finally load cart summary
             await this.loadCartSummary();
+            console.log('Cart summary loaded');
+            
+            // Bind events
             this.bindEvents();
+            console.log('Events bound');
+            
+            console.log('Checkout initialization complete');
         } catch (error) {
             console.error('Error initializing checkout:', error);
             this.showError('Failed to initialize checkout. Please try again.');
+            throw error;
         }
     }
 
@@ -310,5 +323,5 @@ class Checkout {
     }
 }
 
-// Initialize checkout when DOM is ready
-document.addEventListener('DOMContentLoaded', () => new Checkout()); 
+// Export the Checkout class
+window.Checkout = Checkout; 

@@ -11,65 +11,65 @@ async function loadComponents() {
         // Load footer
         await loadFooter();
         
-        // Initialize cart after all components are loaded
-        console.log('Initializing cart...');
-        if (typeof Cart !== 'undefined') {
-            if (!window.cartInstance) {
-                window.cartInstance = new Cart();
-                await window.cartInstance.init();
-                console.log('Cart initialized successfully');
-            }
-        } else {
-            console.error('Cart class not found');
-        }
+        console.log('All components loaded successfully');
     } catch (error) {
         console.error('Error loading components:', error);
+        throw error;
     }
 }
 
 async function loadHeader() {
-    const headerResponse = await fetch('components/header.html');
-    if (!headerResponse.ok) {
-        console.log('Using fallback header');
-        const headerElement = document.querySelector('header');
-        if (headerElement) {
+    console.log('Loading header...');
+    const headerElement = document.getElementById('header');
+    if (!headerElement) {
+        console.error('Header element not found');
+        return;
+    }
+
+    try {
+        const headerResponse = await fetch('components/header.html');
+        if (!headerResponse.ok) {
+            console.log('Using fallback header');
             headerElement.innerHTML = `
-                <div class="announcement-bar">
-                    <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
-                </div>
-                
-                <div class="top-header">
-                    <div class="container">
-                        <div class="logo">
-                            <a href="index.html">
-                                <img src="images/logo.png" alt="Wave Technologies Logo">
-                            </a>
-                        </div>
-                        <nav class="main-nav">
-                            <ul class="nav-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="shop.html">Shop</a></li>
-                                <li><a href="information.html">Information</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                            <div class="header-icons">
-                                <a href="#" class="cart-link">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <span class="cart-count">0</span>
+                <header>
+                    <div class="announcement-bar">
+                        <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
+                    </div>
+                    
+                    <div class="top-header">
+                        <div class="container">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo.png" alt="Wave Technologies Logo">
                                 </a>
                             </div>
-                        </nav>
+                            <nav class="main-nav">
+                                <ul class="nav-links">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="shop.html">Shop</a></li>
+                                    <li><a href="information.html">Information</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                                <div class="header-icons">
+                                    <a href="#" class="cart-link">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <span class="cart-count">0</span>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
                     </div>
-                </div>
+                </header>
             `;
-        }
-    } else {
-        const headerContent = await headerResponse.text();
-        const headerElement = document.querySelector('header');
-        if (headerElement) {
+        } else {
+            const headerContent = await headerResponse.text();
             headerElement.innerHTML = headerContent;
         }
+        console.log('Header loaded successfully');
+    } catch (error) {
+        console.error('Error loading header:', error);
+        throw error;
     }
 }
 
@@ -157,7 +157,4 @@ async function loadFooter() {
             footerElement.innerHTML = footerContent;
         }
     }
-}
-
-// Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', loadComponents); 
+} 

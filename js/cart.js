@@ -367,10 +367,5 @@ class Cart {
     }
 }
 
-// Initialize cart when DOM is ready
-document.addEventListener('DOMContentLoaded', () => {
-    if (!window.cartInstance) {
-        window.cartInstance = new Cart();
-        window.cartInstance.init();
-    }
-}); 
+// Export the Cart class
+window.Cart = Cart; 
