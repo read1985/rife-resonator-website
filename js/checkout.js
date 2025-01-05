@@ -54,8 +54,8 @@ class Checkout {
     }
 
     setupStripe() {
-        // Initialize Stripe
-        this.stripe = Stripe('your_publishable_key');
+        // Initialize Stripe with test key
+        this.stripe = Stripe('pk_test_51OfzlCG4gwxEhtFQ7zIWmvCsFLjQbncrnl112lJzia0LfJJhEoYACz7RKI0SIIAHkbNBWD60vFnoUOMiq9WNOtob00UFQ4CSAa'); // Replace with your actual publishable key
         this.elements = this.stripe.elements();
         
         // Create card element
@@ -150,8 +150,8 @@ class Checkout {
             submitButton.disabled = true;
             spinner.classList.remove('hidden');
 
-            // Create payment intent
-            const response = await fetch('/create-payment-intent', {
+            // Create payment intent using local server
+            const response = await fetch('http://localhost:3000/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
