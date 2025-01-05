@@ -89,6 +89,16 @@ class Cart {
             closeCart.addEventListener('click', () => this.closeCart());
         }
         
+        // Checkout button
+        if (this.checkoutButton) {
+            this.checkoutButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (!this.checkoutButton.disabled && this.items.length > 0) {
+                    window.location.href = 'checkout.html';
+                }
+            });
+        }
+        
         // Add to cart buttons
         const addToCartButtons = document.querySelectorAll('.add-to-cart, .add-to-cart-btn');
         console.log('Found add to cart buttons:', addToCartButtons.length);
