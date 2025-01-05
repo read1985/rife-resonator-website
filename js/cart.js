@@ -150,32 +150,14 @@ class Cart {
             console.log('Checkout button not found');
         }
         
-        // Add to cart buttons - handle both button types
-        const addToCartButtons = document.querySelectorAll('.add-to-cart-btn, .add-to-cart');
-        console.log('Found add to cart buttons:', addToCartButtons.length);
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                console.log('Add to cart clicked');
-                const productCard = e.target.closest('.product-card, .product-details');
-                if (productCard) {
-                    console.log('Found product container:', productCard);
-                    this.addToCart(productCard);
-                } else {
-                    console.error('No product container found');
-                }
-            });
-        });
-
-        // Also bind to document for dynamically added buttons
+        // Use event delegation for add to cart buttons
         document.addEventListener('click', (e) => {
-            if (e.target.matches('.add-to-cart-btn, .add-to-cart') || 
-                e.target.closest('.add-to-cart-btn, .add-to-cart')) {
+            const addToCartButton = e.target.closest('.add-to-cart-btn, .add-to-cart');
+            if (addToCartButton) {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Add to cart clicked (delegated)');
-                const productCard = e.target.closest('.product-card, .product-details');
+                const productCard = addToCartButton.closest('.product-card, .product-details');
                 if (productCard) {
                     console.log('Found product container:', productCard);
                     this.addToCart(productCard);
