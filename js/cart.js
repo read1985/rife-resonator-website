@@ -116,17 +116,15 @@ class Cart {
     bindEvents() {
         console.log('Binding cart events');
         
-        // Cart toggle - handle both types of cart toggle buttons
-        this.cartToggle = document.querySelector('.cart-link, .cart-toggle');
-        if (this.cartToggle) {
-            console.log('Setting up cart toggle');
-            this.cartToggle.addEventListener('click', (e) => {
+        // Cart toggle - bind to document for better event delegation
+        document.addEventListener('click', (e) => {
+            const cartToggle = e.target.closest('.cart-link');
+            if (cartToggle) {
                 e.preventDefault();
+                console.log('Cart toggle clicked');
                 this.toggleCart();
-            });
-        } else {
-            console.log('Cart toggle not found');
-        }
+            }
+        });
         
         // Close cart button
         this.cartSidebar = document.querySelector('.cart-sidebar');

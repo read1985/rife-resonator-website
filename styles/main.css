@@ -1014,3 +1014,31 @@ footer {
 .cart-notification i {
     font-size: 20px;
 }
+
+/* Cart Count */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cart Link */
+.cart-link {
+    position: relative;
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.cart-link i {
+    font-size: 1.2em;
+}
