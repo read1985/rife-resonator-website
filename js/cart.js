@@ -189,18 +189,39 @@ class Cart {
     toggleCart() {
         if (this.cartSidebar) {
             this.cartSidebar.classList.toggle('active');
+            // Toggle overlay
+            let overlay = document.querySelector('.cart-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'cart-overlay';
+                document.body.appendChild(overlay);
+                overlay.addEventListener('click', () => this.closeCart());
+            }
+            overlay.classList.toggle('active');
         }
     }
 
     closeCart() {
         if (this.cartSidebar) {
             this.cartSidebar.classList.remove('active');
+            const overlay = document.querySelector('.cart-overlay');
+            if (overlay) {
+                overlay.classList.remove('active');
+            }
         }
     }
 
     openCart() {
         if (this.cartSidebar) {
             this.cartSidebar.classList.add('active');
+            let overlay = document.querySelector('.cart-overlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.className = 'cart-overlay';
+                document.body.appendChild(overlay);
+                overlay.addEventListener('click', () => this.closeCart());
+            }
+            overlay.classList.add('active');
         }
     }
 
