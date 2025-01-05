@@ -116,6 +116,12 @@ class Cart {
     bindEvents() {
         console.log('Binding cart events');
         
+        // Remove any existing event listeners
+        if (this.eventsInitialized) {
+            console.log('Events already initialized, skipping');
+            return;
+        }
+        
         // Cart toggle - bind to document for better event delegation
         document.addEventListener('click', (e) => {
             const cartToggle = e.target.closest('.cart-link');
@@ -166,6 +172,9 @@ class Cart {
                 }
             }
         });
+
+        this.eventsInitialized = true;
+        console.log('Events initialized');
     }
 
     toggleCart() {
