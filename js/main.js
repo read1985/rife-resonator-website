@@ -29,8 +29,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         switch (currentPage) {
             case 'checkout.html':
                 console.log('Initializing checkout page...');
-                const checkout = new Checkout();
-                await checkout.init();
+                if (typeof Checkout !== 'undefined') {
+                    const checkout = new Checkout();
+                    await checkout.init();
+                }
                 break;
                 
             case 'shop.html':
@@ -47,27 +49,27 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
             case 'blog.html':
                 console.log('Initializing blog page...');
-                if (document.querySelector('.blog-posts')) {
+                if (typeof Blog !== 'undefined' && document.querySelector('.blog-posts')) {
                     new Blog();
                 }
                 break;
                 
             case 'contact.html':
                 console.log('Initializing contact page...');
-                if (document.getElementById('contactForm')) {
+                if (typeof ContactForm !== 'undefined' && document.getElementById('contactForm')) {
                     new ContactForm();
                 }
                 break;
         }
         
-        // Initialize newsletter if present
-        if (document.querySelector('.newsletter-form')) {
+        // Initialize newsletter if present and the class exists
+        if (typeof Newsletter !== 'undefined' && document.querySelector('.newsletter-form')) {
             console.log('Initializing newsletter...');
             new Newsletter();
         }
         
-        // Initialize treatments if present
-        if (document.querySelector('.toggle-item, .frequency-item')) {
+        // Initialize treatments if present and the function exists
+        if (typeof initializeTreatments === 'function' && document.querySelector('.toggle-item, .frequency-item')) {
             console.log('Initializing treatments...');
             initializeTreatments();
         }

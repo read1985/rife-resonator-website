@@ -2,14 +2,27 @@ console.log('Loading components...');
 
 async function loadComponents() {
     try {
-        // Load header
-        await loadHeader();
+        // Check if we need to load components
+        const headerElement = document.getElementById('header');
+        const footerElement = document.getElementById('footer');
         
-        // Load cart sidebar
+        if (!headerElement && !footerElement) {
+            console.log('No component placeholders found, skipping component loading');
+            return;
+        }
+        
+        // Load header if needed
+        if (headerElement) {
+            await loadHeader();
+        }
+        
+        // Load cart sidebar (always load this as it's needed for the cart)
         await loadCartSidebar();
         
-        // Load footer
-        await loadFooter();
+        // Load footer if needed
+        if (footerElement) {
+            await loadFooter();
+        }
         
         console.log('All components loaded successfully');
     } catch (error) {
@@ -22,7 +35,7 @@ async function loadHeader() {
     console.log('Loading header...');
     const headerElement = document.getElementById('header');
     if (!headerElement) {
-        console.error('Header element not found');
+        console.log('No header placeholder found, skipping header loading');
         return;
     }
 

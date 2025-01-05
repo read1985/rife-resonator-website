@@ -45,22 +45,23 @@ class Cart {
             const checkElements = () => {
                 console.log('Checking cart elements, attempt:', attempts + 1);
                 
-                this.cartToggle = document.querySelector('.cart-link');
+                // Required elements
                 this.cartSidebar = document.querySelector('.cart-sidebar');
                 this.cartItems = document.querySelector('.cart-items');
-                this.cartCount = document.querySelector('.cart-count');
                 this.cartSubtotal = document.querySelector('.cart-subtotal');
                 this.cartShipping = document.querySelector('.cart-shipping');
                 this.cartTax = document.querySelector('.cart-tax');
                 this.cartTotal = document.querySelector('.cart-total');
                 this.checkoutButton = document.querySelector('.cart-sidebar .checkout-button');
                 
-                // Log which elements are missing
-                const missingElements = {
-                    cartToggle: !this.cartToggle,
+                // Optional elements (header-dependent)
+                this.cartToggle = document.querySelector('.cart-link');
+                this.cartCount = document.querySelector('.cart-count');
+                
+                // Log which required elements are missing
+                const missingRequired = {
                     cartSidebar: !this.cartSidebar,
                     cartItems: !this.cartItems,
-                    cartCount: !this.cartCount,
                     cartSubtotal: !this.cartSubtotal,
                     cartShipping: !this.cartShipping,
                     cartTax: !this.cartTax,
@@ -68,24 +69,40 @@ class Cart {
                     checkoutButton: !this.checkoutButton
                 };
                 
-                const missing = Object.entries(missingElements)
+                // Log which optional elements are missing
+                const missingOptional = {
+                    cartToggle: !this.cartToggle,
+                    cartCount: !this.cartCount
+                };
+                
+                const missingRequiredElements = Object.entries(missingRequired)
                     .filter(([_, isMissing]) => isMissing)
                     .map(([name]) => name);
                 
-                if (missing.length > 0) {
-                    console.log('Missing elements:', missing);
+                const missingOptionalElements = Object.entries(missingOptional)
+                    .filter(([_, isMissing]) => isMissing)
+                    .map(([name]) => name);
+                
+                if (missingRequiredElements.length > 0) {
+                    console.log('Missing required elements:', missingRequiredElements);
                 }
                 
-                if (this.cartToggle && this.cartSidebar && this.cartItems && 
-                    this.cartCount && this.cartSubtotal && this.cartShipping && 
-                    this.cartTax && this.cartTotal && this.checkoutButton) {
-                    console.log('All cart elements found');
+                if (missingOptionalElements.length > 0) {
+                    console.log('Missing optional elements:', missingOptionalElements);
+                }
+                
+                // Only check required elements for resolution
+                if (Object.values(missingRequired).every(missing => !missing)) {
+                    console.log('All required cart elements found');
+                    if (missingOptionalElements.length > 0) {
+                        console.log('Some optional elements are missing, but we can proceed');
+                    }
                     resolve();
                 } else {
                     attempts++;
                     if (attempts >= maxAttempts) {
-                        console.error('Could not find cart elements after', maxAttempts, 'attempts');
-                        reject(new Error('Could not find cart elements'));
+                        console.error('Could not find required cart elements after', maxAttempts, 'attempts');
+                        reject(new Error('Could not find required cart elements'));
                         return;
                     }
                     setTimeout(checkElements, 500);
