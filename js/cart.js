@@ -345,34 +345,23 @@ class Cart {
         // Subtotal
         this.total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         if (this.cartSubtotal) {
-            this.cartSubtotal.innerHTML = `
-                <div class="total-line">
-                    <span>Subtotal:</span>
-                    <span>$${this.total.toFixed(2)}</span>
-                </div>
-            `;
+            this.cartSubtotal.textContent = `$${this.total.toFixed(2)}`;
         }
 
-        // Flat shipping fee of $50
-        this.shipping = 50;
+        // Only show shipping if there are items in cart
+        this.shipping = this.items.length > 0 ? 50 : 0;
         if (this.cartShipping) {
-            this.cartShipping.innerHTML = `
-                <div class="total-line">
-                    <span>Shipping:</span>
-                    <span>$${this.shipping.toFixed(2)}</span>
-                </div>
-            `;
+            if (this.items.length > 0) {
+                this.cartShipping.textContent = `$${this.shipping.toFixed(2)} (Flat Rate Shipping)`;
+            } else {
+                this.cartShipping.textContent = '';
+            }
         }
 
-        // Total (no tax)
-        const finalTotal = this.total + this.shipping;
+        // Total
+        const finalTotal = this.total + (this.items.length > 0 ? this.shipping : 0);
         if (this.cartTotal) {
-            this.cartTotal.innerHTML = `
-                <div class="total-line grand-total">
-                    <span>Total:</span>
-                    <span>$${finalTotal.toFixed(2)}</span>
-                </div>
-            `;
+            this.cartTotal.textContent = `$${finalTotal.toFixed(2)}`;
         }
     }
 
