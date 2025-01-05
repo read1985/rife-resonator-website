@@ -1,6 +1,7 @@
 console.log('Loading components...');
 
-async function loadComponents() {
+// Make loadComponents available globally
+window.loadComponents = async function loadComponents() {
     try {
         // Check if we need to load components
         const headerElement = document.getElementById('header');
@@ -35,12 +36,15 @@ async function loadHeader() {
     console.log('Loading header...');
     const headerElement = document.getElementById('header');
     if (!headerElement) {
-        console.log('No header placeholder found, skipping header loading');
+        console.error('Header element not found');
         return;
     }
 
     try {
+        console.log('Fetching header from components/header.html');
         const headerResponse = await fetch('components/header.html');
+        console.log('Header fetch response:', headerResponse.status);
+        
         if (!headerResponse.ok) {
             console.log('Using fallback header');
             headerElement.innerHTML = `
@@ -76,13 +80,46 @@ async function loadHeader() {
                 </header>
             `;
         } else {
+            console.log('Loading header content');
             const headerContent = await headerResponse.text();
             headerElement.innerHTML = headerContent;
         }
         console.log('Header loaded successfully');
     } catch (error) {
         console.error('Error loading header:', error);
-        throw error;
+        console.log('Using fallback header due to error');
+        headerElement.innerHTML = `
+            <header>
+                <div class="announcement-bar">
+                    <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
+                </div>
+                
+                <div class="top-header">
+                    <div class="container">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="images/logo.png" alt="Wave Technologies Logo">
+                            </a>
+                        </div>
+                        <nav class="main-nav">
+                            <ul class="nav-links">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="shop.html">Shop</a></li>
+                                <li><a href="information.html">Information</a></li>
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                            <div class="header-icons">
+                                <a href="#" class="cart-link">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span class="cart-count">0</span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+        `;
     }
 }
 
