@@ -1,282 +1,216 @@
 class Checkout {
     constructor() {
-        this.cart = window.cart;
+        console.log('Initializing checkout...');
+        this.cartLoadAttempts = 0;
+        this.maxCartLoadAttempts = 10;
         this.init();
     }
 
-    init() {
-        this.checkoutForm = document.getElementById('checkout-form');
-        if (!this.checkoutForm) return;
+    async init() {
+        try {
+            await this.waitForElements();
+            this.setupStripe();
+            this.loadCartSummary();
+            this.bindEvents();
+        } catch (error) {
+            console.error('Error initializing checkout:', error);
+            this.showError('Failed to initialize checkout. Please try again.');
+        }
+    }
 
-        this.loadCartSummary();
-        this.initializeFormValidation();
-        this.initializePaymentFields();
-        this.handleFormSubmission();
+    async waitForElements() {
+        return new Promise((resolve, reject) => {
+            const checkElements = () => {
+                const elements = {
+                    cartInstance: window.cartInstance !== undefined && window.cartInstance !== null,
+                    subtotal: document.getElementById('subtotal'),
+                    shipping: document.getElementById('shipping'),
+                    tax: document.getElementById('tax'),
+                    total: document.getElementById('total'),
+                    cartItemsList: document.getElementById('cart-items-list'),
+                    cardElement: document.getElementById('card-element'),
+                    cardErrors: document.getElementById('card-errors'),
+                    submitButton: document.querySelector('.checkout-button')
+                };
+
+                console.log('Checking elements:', elements);
+
+                if (Object.values(elements).every(element => element)) {
+                    console.log('All elements found');
+                    this.elements = elements;
+                    resolve();
+                } else {
+                    if (this.cartLoadAttempts >= this.maxCartLoadAttempts) {
+                        reject(new Error('Checkout initialization timed out'));
+                        return;
+                    }
+                    this.cartLoadAttempts++;
+                    setTimeout(checkElements, 500);
+                }
+            };
+
+            checkElements();
+        });
+    }
+
+    setupStripe() {
+        // Initialize Stripe
+        this.stripe = Stripe('your_publishable_key');
+        this.elements = this.stripe.elements();
+        
+        // Create card element
+        this.card = this.elements.create('card', {
+            style: {
+                base: {
+                    fontSize: '16px',
+                    color: '#32325d',
+                }
+            }
+        });
+
+        // Mount card element
+        this.card.mount('#card-element');
+
+        // Handle validation errors
+        this.card.addEventListener('change', ({error}) => {
+            const displayError = document.getElementById('card-errors');
+            if (error) {
+                displayError.textContent = error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
     }
 
     loadCartSummary() {
-        const cartData = this.cart.getCartData();
-        const summaryContainer = document.querySelector('.order-summary');
-        
-        if (!summaryContainer || cartData.items.length === 0) {
-            window.location.href = 'shop.html';
-            return;
-        }
-
-        // Update items list
-        const itemsList = summaryContainer.querySelector('.order-items');
-        itemsList.innerHTML = cartData.items.map(item => `
-            <div class="order-item">
-                <img src="${item.image}" alt="${item.name}">
-                <div class="item-details">
-                    <h4>${item.name}</h4>
-                    <div class="item-quantity">Quantity: ${item.quantity}</div>
-                    <div class="item-price">$${(item.price * item.quantity).toFixed(2)}</div>
-                </div>
-            </div>
-        `).join('');
-
-        // Update totals
-        const totalsContainer = summaryContainer.querySelector('.order-totals');
-        totalsContainer.innerHTML = `
-            <div class="total-line">
-                <span>Subtotal:</span>
-                <span>$${cartData.subtotal.toFixed(2)}</span>
-            </div>
-            <div class="total-line">
-                <span>Shipping:</span>
-                <span>${cartData.shipping === 0 ? 'Free' : '$' + cartData.shipping.toFixed(2)}</span>
-            </div>
-            <div class="total-line">
-                <span>Tax:</span>
-                <span>$${cartData.tax.toFixed(2)}</span>
-            </div>
-            <div class="total-line total">
-                <span>Total:</span>
-                <span>$${cartData.total.toFixed(2)}</span>
-            </div>
-        `;
-    }
-
-    initializeFormValidation() {
-        const inputs = this.checkoutForm.querySelectorAll('input[required], select[required]');
-        
-        inputs.forEach(input => {
-            input.addEventListener('blur', () => this.validateField(input));
-            input.addEventListener('input', () => {
-                if (input.classList.contains('invalid')) {
-                    this.validateField(input);
+        try {
+            if (!window.cartInstance || !window.cartInstance.getCartData) {
+                if (this.cartLoadAttempts < this.maxCartLoadAttempts) {
+                    console.log('Cart not ready, retrying...', this.cartLoadAttempts);
+                    this.cartLoadAttempts++;
+                    setTimeout(() => this.loadCartSummary(), 500);
+                    return;
+                } else {
+                    throw new Error('Cart failed to initialize');
                 }
-            });
-        });
-    }
+            }
 
-    validateField(field) {
-        const errorClass = 'invalid';
-        let isValid = true;
-        let errorMessage = '';
+            const cartData = window.cartInstance.getCartData();
+            console.log('Cart data loaded:', cartData);
 
-        // Remove existing error message
-        const existingError = field.parentElement.querySelector('.error-message');
-        if (existingError) {
-            existingError.remove();
-        }
+            if (!cartData || !cartData.items) {
+                console.error('Invalid cart data structure:', cartData);
+                throw new Error('Invalid cart data structure');
+            }
 
-        // Validate based on field type
-        switch(field.type) {
-            case 'email':
-                if (!this.isValidEmail(field.value)) {
-                    errorMessage = 'Please enter a valid email address';
-                    isValid = false;
-                }
-                break;
-            
-            case 'tel':
-                if (!this.isValidPhone(field.value)) {
-                    errorMessage = 'Please enter a valid phone number';
-                    isValid = false;
-                }
-                break;
-            
-            case 'text':
-                if (field.name === 'card-number') {
-                    if (!this.isValidCardNumber(field.value)) {
-                        errorMessage = 'Please enter a valid card number';
-                        isValid = false;
-                    }
-                } else if (field.name === 'cvv') {
-                    if (!this.isValidCVV(field.value)) {
-                        errorMessage = 'Please enter a valid CVV';
-                        isValid = false;
-                    }
-                } else if (!field.value.trim()) {
-                    errorMessage = 'This field is required';
-                    isValid = false;
-                }
-                break;
-            
-            default:
-                if (!field.value.trim()) {
-                    errorMessage = 'This field is required';
-                    isValid = false;
-                }
-        }
-
-        if (!isValid) {
-            this.showError(field, errorMessage);
-        }
-
-        field.classList.toggle(errorClass, !isValid);
-        return isValid;
-    }
-
-    showError(field, message) {
-        const errorDiv = document.createElement('div');
-        errorDiv.className = 'error-message';
-        errorDiv.textContent = message;
-        field.parentElement.appendChild(errorDiv);
-    }
-
-    isValidEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
-
-    isValidPhone(phone) {
-        return /^[\d\s-+()]{10,}$/.test(phone);
-    }
-
-    isValidCardNumber(number) {
-        return /^\d{16}$/.test(number.replace(/\s/g, ''));
-    }
-
-    isValidCVV(cvv) {
-        return /^\d{3,4}$/.test(cvv);
-    }
-
-    initializePaymentFields() {
-        // Card number formatting
-        const cardInput = this.checkoutForm.querySelector('input[name="card-number"]');
-        if (cardInput) {
-            cardInput.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/\D/g, '');
-                value = value.replace(/(\d{4})/g, '$1 ').trim();
-                e.target.value = value;
-            });
-        }
-
-        // Expiry date formatting
-        const expiryInput = this.checkoutForm.querySelector('input[name="expiry"]');
-        if (expiryInput) {
-            expiryInput.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length >= 2) {
-                    value = value.slice(0, 2) + '/' + value.slice(2);
-                }
-                e.target.value = value;
-            });
-        }
-    }
-
-    handleFormSubmission() {
-        this.checkoutForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Validate all required fields
-            const requiredFields = this.checkoutForm.querySelectorAll('[required]');
-            let isValid = true;
-
-            requiredFields.forEach(field => {
-                if (!this.validateField(field)) {
-                    isValid = false;
-                }
-            });
-
-            if (!isValid) {
+            // Only redirect if cart is empty AND we've confirmed the cart is properly loaded
+            if (cartData.items.length === 0) {
+                console.log('Cart is empty, redirecting to shop...');
+                window.location.href = 'shop.html';
                 return;
             }
 
-            // Show loading state
-            const submitButton = this.checkoutForm.querySelector('button[type="submit"]');
-            const originalButtonText = submitButton.textContent;
+            // Update summary
+            this.elements.subtotal.textContent = `$${cartData.subtotal.toFixed(2)}`;
+            this.elements.shipping.textContent = `$${cartData.shipping.toFixed(2)}`;
+            this.elements.tax.textContent = `$${cartData.tax.toFixed(2)}`;
+            this.elements.total.textContent = `$${cartData.total.toFixed(2)}`;
+
+            // Update items list
+            this.elements.cartItemsList.innerHTML = cartData.items.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-details">
+                        <h4>${item.name}</h4>
+                        <p>Quantity: ${item.quantity}</p>
+                        <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
+                    </div>
+                </div>
+            `).join('');
+
+        } catch (error) {
+            console.error('Error loading cart summary:', error);
+            this.showError('Failed to load cart data. Please try again.');
+        }
+    }
+
+    bindEvents() {
+        const form = document.querySelector('.checkout-form');
+        if (form) {
+            form.addEventListener('submit', (e) => this.handleSubmit(e));
+        }
+    }
+
+    async handleSubmit(e) {
+        e.preventDefault();
+        const submitButton = this.elements.submitButton;
+        const spinner = document.getElementById('spinner');
+
+        try {
             submitButton.disabled = true;
-            submitButton.textContent = 'Processing...';
+            spinner.classList.remove('hidden');
 
-            try {
-                // Collect form data
-                const formData = new FormData(this.checkoutForm);
-                const orderData = {
-                    customer: {
-                        email: formData.get('email'),
-                        phone: formData.get('phone'),
-                        firstName: formData.get('first-name'),
-                        lastName: formData.get('last-name')
-                    },
-                    shipping: {
-                        address: formData.get('address'),
-                        city: formData.get('city'),
-                        state: formData.get('state'),
-                        zip: formData.get('zip'),
-                        country: formData.get('country')
-                    },
-                    payment: {
-                        cardNumber: formData.get('card-number'),
-                        expiry: formData.get('expiry'),
-                        cvv: formData.get('cvv')
-                    },
-                    order: this.cart.getCartData()
-                };
+            // Create payment intent
+            const response = await fetch('/create-payment-intent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    items: window.cartInstance.getCartData().items
+                })
+            });
 
-                // Here you would typically send the order to your server
-                await this.processOrder(orderData);
-
-                // Show success message and redirect
-                this.showSuccessMessage();
-                this.cart.clearCart();
-                
-                setTimeout(() => {
-                    window.location.href = 'order-confirmation.html';
-                }, 2000);
-
-            } catch (error) {
-                // Show error message
-                const errorMessage = document.createElement('div');
-                errorMessage.className = 'form-error';
-                errorMessage.textContent = 'There was an error processing your order. Please try again.';
-                this.checkoutForm.insertBefore(errorMessage, this.checkoutForm.firstChild);
-
-                // Remove error message after 5 seconds
-                setTimeout(() => errorMessage.remove(), 5000);
-
-            } finally {
-                // Reset button state
-                submitButton.disabled = false;
-                submitButton.textContent = originalButtonText;
+            if (!response.ok) {
+                throw new Error('Failed to create payment intent');
             }
-        });
+
+            const data = await response.json();
+            
+            // Confirm card payment
+            const result = await this.stripe.confirmCardPayment(data.clientSecret, {
+                payment_method: {
+                    card: this.card,
+                    billing_details: {
+                        name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        address: {
+                            line1: document.getElementById('address').value,
+                            city: document.getElementById('city').value,
+                            state: document.getElementById('state').value,
+                            postal_code: document.getElementById('zip').value,
+                            country: document.getElementById('country').value
+                        }
+                    }
+                }
+            });
+
+            if (result.error) {
+                throw result.error;
+            }
+
+            // Payment successful
+            window.cartInstance.clearCart();
+            window.location.href = 'order-confirmation.html';
+
+        } catch (error) {
+            console.error('Payment error:', error);
+            this.showError(error.message);
+        } finally {
+            submitButton.disabled = false;
+            spinner.classList.add('hidden');
+        }
     }
 
-    async processOrder(orderData) {
-        // Simulate API call delay
-        return new Promise(resolve => setTimeout(resolve, 2000));
-    }
-
-    showSuccessMessage() {
-        const successMessage = document.createElement('div');
-        successMessage.className = 'checkout-success';
-        successMessage.innerHTML = `
-            <i class="fas fa-check-circle"></i>
-            <h3>Order Successful!</h3>
-            <p>Thank you for your purchase. You will be redirected to the order confirmation page.</p>
-        `;
-
-        this.checkoutForm.innerHTML = '';
-        this.checkoutForm.appendChild(successMessage);
+    showError(message) {
+        const errorElement = document.getElementById('card-errors');
+        errorElement.textContent = message;
+        setTimeout(() => {
+            errorElement.textContent = '';
+        }, 5000);
     }
 }
 
-// Initialize checkout functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('checkout-form')) {
-        new Checkout();
-    }
-}); 
+// Initialize checkout when DOM is ready
+document.addEventListener('DOMContentLoaded', () => new Checkout()); 
