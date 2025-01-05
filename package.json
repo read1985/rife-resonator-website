@@ -1,0 +1,16 @@
+{
+  "name": "rife-resonator-website",
+  "version": "1.0.0",
+  "description": "Website for Wave Technologies Rife Resonators",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/main.scss:styles/main.css --watch",
+    "start": "live-server"
+  },
+  "dependencies": {
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+} 

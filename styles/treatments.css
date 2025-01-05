@@ -1,0 +1,481 @@
+.hero-section {
+    background-color: rgb(40, 43, 48);
+    color: white;
+    padding: 60px 0;
+    position: relative;
+}
+
+.hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(40, 43, 48, 0.85); /* Dark overlay to ensure text readability */
+}
+
+.hero-section .container {
+    position: relative; /* To place content above the overlay */
+    z-index: 1;
+}
+
+.hero-section .subtitle {
+    color: rgba(255, 255, 255, 0.62);
+    font-size: 18px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin-bottom: 20px;
+}
+
+.hero-section .separator {
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-primary);
+    margin: 30px auto;
+}
+
+.hero-section .hero-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.treatments-list {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.treatments-list h2 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+.treatments-list .section-description {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.toggle-widget {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.toggle-item {
+    margin-bottom: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+}
+
+.toggle-header {
+    padding: 20px;
+    background: #fff;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.toggle-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.toggle-icon:before,
+.toggle-icon:after {
+    content: '';
+    position: absolute;
+    background-color: #333;
+    transition: transform 0.3s ease;
+}
+
+.toggle-icon:before {
+    width: 2px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.toggle-icon:after {
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.toggle-item.active .toggle-icon:before {
+    transform: translateX(-50%) rotate(90deg);
+}
+
+.toggle-content {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.toggle-item.active .toggle-content {
+    display: block;
+}
+
+.treatment-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.treatment-item:last-child {
+    margin-bottom: 0;
+}
+
+.treatment-item h4 {
+    color: #333;
+    font-size: 18px;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+
+.treatment-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.treatment-item small {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.treatment-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.treatment-item ul li {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.treatment-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+.treatment-item ul li:before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+}
+
+/* Introduction Section */
+.intro-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-image {
+    position: relative;
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.intro-content {
+    max-width: 800px;
+}
+
+.intro-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+    .intro-grid {
+        grid-template-columns: 350px 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-image {
+        max-width: 450px;
+        margin: 0 auto 30px;
+    }
+}
+
+/* Latest Frequencies Section */
+.latest-frequencies {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.latest-frequencies h2 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: Tahoma, sans-serif;
+}
+
+.frequencies-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.frequency-item {
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.frequency-item h3 {
+    color: var(--color-primary);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.frequency-item h3:after {
+    content: '+';
+    font-size: 24px;
+    color: #666;
+}
+
+.frequency-item.active h3:after {
+    content: '-';
+}
+
+.frequency-item .toggle-content {
+    display: none;
+}
+
+.frequency-item.active .toggle-content {
+    display: block;
+}
+
+.frequency-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.frequency-item small {
+    display: block;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.frequency-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.frequency-item ul li {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.frequency-item ul li:before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+}
+
+.frequency-item .protocol {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+.frequency-item .protocol p {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Hero Section Updates */
+.hero-section .btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--color-primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: var(--color-secondary1);
+}
+
+/* Experimental Frequencies Section */
+.experimental-frequencies {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.experimental-frequencies h2 {
+    font-size: 42px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Tahoma, sans-serif;
+}
+
+.experimental-frequencies .section-description {
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.experimental-frequencies .frequencies-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experimental-frequencies .frequency-item {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.experimental-frequencies .frequency-item h3 {
+    padding: 20px;
+    margin: 0;
+    color: var(--color-primary);
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.experimental-frequencies .frequency-item h3:after {
+    content: '+';
+    font-size: 24px;
+    color: #666;
+}
+
+.experimental-frequencies .frequency-item.active h3:after {
+    content: '-';
+}
+
+.experimental-frequencies .toggle-content {
+    display: none;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #e5e5e5;
+}
+
+.experimental-frequencies .frequency-item.active .toggle-content {
+    display: block;
+}
+
+.experimental-frequencies .frequency-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.experimental-frequencies .frequency-item small {
+    display: block;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.experimental-frequencies .frequency-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.experimental-frequencies .frequency-item ul li {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.experimental-frequencies .frequency-item ul li:before {
+    content: "•";
+    color: var(--color-primary);
+    position: absolute;
+    left: 0;
+} 

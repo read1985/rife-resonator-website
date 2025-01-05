@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Wave Technologies</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <a href="mailto:info@riferesonator.com">info@riferesonator.com</a>
+        </div>
+        <nav class="main-nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Wave_Technologies_Logo-3523217.png" alt="Wave Technologies Logo">
+                </a>
+            </div>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="shop.html">Shop</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html?category=resonators">Resonators</a></li>
+                            <li><a href="shop.html?category=accessories">Accessories</a></li>
+                            <li><a href="shop.html?category=packages">Packages</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="information.html">Information</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="treatments-and-frequencies.html">Treatments and Frequencies</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="#" class="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="cart-page">
+        <h1>Shopping Cart</h1>
+
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="images/wave5-pro.jpg" alt="Wave5 Pro Resonator">
+                    </div>
+                    <div class="item-details">
+                        <h2>Wave5 Pro Resonator</h2>
+                        <p class="item-description">Professional grade resonator with over 800 pre-installed programs</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <p class="price">$1,499.00</p>
+                        <button class="remove-item">Remove</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <div class="item-image">
+                        <img src="images/accessories/contact-pads.jpg" alt="Contact Pads">
+                    </div>
+                    <div class="item-details">
+                        <h2>Contact Pads (Set of 4)</h2>
+                        <p class="item-description">Premium contact pads for optimal frequency transmission</p>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <div class="item-price">
+                        <p class="price">$49.99</p>
+                        <button class="remove-item">Remove</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-item">
+                    <span>Subtotal</span>
+                    <span>$1,548.99</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping</span>
+                    <span>Calculated at checkout</span>
+                </div>
+                <div class="discount-section">
+                    <input type="text" placeholder="Discount code">
+                    <button>Apply</button>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$1,548.99</span>
+                </div>
+                <a href="checkout.html" class="checkout-button">Proceed to Checkout</a>
+                <a href="store.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="newsletter">
+            <h4>NEWSLETTER</h4>
+            <p>Sign up for our email to get the latest news</p>
+            <form id="newsletter-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <span class="error">Required field!</span>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <span class="error">Required field!</span>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+        </div>
+
+        <div class="footer-links">
+            <h4>INFORMATION</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="downloads.html">PDF Downloads</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="copyright">
+            <p>©2024. Rife Health. All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html> 

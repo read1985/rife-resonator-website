@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Rife Wave Resonators</title>
+    <meta name="description" content="Secure checkout for your Rife Wave Resonator purchase. Fast shipping and secure payment processing.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="announcement-bar">
+            <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
+        </div>
+        
+        <div class="top-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Rife Wave Resonators Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li class="has-dropdown">
+                    <a href="information.html">Information</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="treatments-and-frequencies.html">Treatments and Frequencies</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="header-icons">
+                <a href="#" class="cart-toggle">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="checkout-page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Checkout</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-content container">
+            <div class="checkout-main">
+                <form id="checkout-form" class="checkout-form">
+                    <section class="form-section">
+                        <h2>Contact Information</h2>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>Shipping Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address *</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State/Province *</label>
+                                <select id="state" name="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <!-- Add more states -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="zip">ZIP/Postal Code *</label>
+                                <input type="text" id="zip" name="zip" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <select id="country" name="country" required>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <!-- Add more countries -->
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>Payment Information</h2>
+                        <div class="form-group">
+                            <label for="card-number">Card Number *</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date *</label>
+                                <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>Additional Information</h2>
+                        <div class="form-group">
+                            <label for="notes">Order Notes (Optional)</label>
+                            <textarea id="notes" name="notes" rows="4"></textarea>
+                        </div>
+                    </section>
+
+                    <div class="form-actions">
+                        <button type="submit" class="checkout-button">Place Order</button>
+                        <p class="secure-notice">
+                            <i class="fas fa-lock"></i>
+                            Your payment information is encrypted and secure
+                        </p>
+                    </div>
+                </form>
+            </div>
+
+            <aside class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="order-totals">
+                    <!-- Order totals will be dynamically added here -->
+                </div>
+                <div class="order-policies">
+                    <div class="policy-item">
+                        <i class="fas fa-truck"></i>
+                        <p>Free shipping on orders over $500</p>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <p>30-day money-back guarantee</p>
+                    </div>
+                    <div class="policy-item">
+                        <i class="fas fa-lock"></i>
+                        <p>Secure payment processing</p>
+                    </div>
+                </div>
+                <div class="need-help">
+                    <h3>Need Help?</h3>
+                    <p>Our customer service team is available Monday through Friday, 9AM-5PM EST</p>
+                    <div class="contact-options">
+                        <a href="tel:1-800-RIFE-NOW">
+                            <i class="fas fa-phone"></i>
+                            1-800-RIFE-NOW
+                        </a>
+                        <a href="mailto:support@riferesonator.com">
+                            <i class="fas fa-envelope"></i>
+                            support@riferesonator.com
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2024 Rife Wave Resonators. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 

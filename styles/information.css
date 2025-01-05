@@ -1,0 +1,305 @@
+.hero-section {
+    background-color: rgba(40, 43, 48, 1);
+    padding: 80px 0;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
+}
+
+.hero-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-section .page-title {
+    color: #ffffff;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 42px;
+    font-family: Tahoma;
+}
+
+.information-page {
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.information-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    font-size: 42px;
+    color: #3e3e3e;
+    margin-bottom: 40px;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+/* Section Styles */
+.information-page section {
+    margin-bottom: 60px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.information-page h2 {
+    font-size: 32px;
+    color: #3e3e3e;
+    margin-bottom: 30px;
+    font-family: Tahoma;
+}
+
+.information-page h3 {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin: 25px 0 15px;
+    font-family: Tahoma;
+}
+
+.information-page p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: Tahoma;
+}
+
+.information-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.information-page ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    font-family: Tahoma;
+}
+
+.information-page ul li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #5ac4cb;
+}
+
+/* Technical Page Specific */
+.software-downloads {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    background: #5ac4cb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: "Open Sans";
+    transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+    background: #4ab3ba;
+}
+
+.download-btn i {
+    font-size: 20px;
+}
+
+/* Support Form */
+.support-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+    font-family: Tahoma;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: Tahoma;
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: #5ac4cb;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Open Sans";
+}
+
+.submit-btn:hover {
+    background: #4ab3ba;
+}
+
+/* Legal Page Specific */
+.disclaimer-content {
+    background: #fff7f7;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ffe0e0;
+}
+
+.disclaimer-content p {
+    color: #d63031;
+}
+
+.terms-content,
+.safety-content,
+.privacy-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .information-page section {
+        padding: 30px 20px;
+    }
+
+    .page-title {
+        font-size: 32px;
+    }
+
+    .information-page h2 {
+        font-size: 28px;
+    }
+
+    .information-page h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .information-page section {
+        padding: 20px 15px;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .download-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.info-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.info-card h2 {
+    color: #3e3e3e;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: Tahoma;
+}
+
+.info-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    font-family: Tahoma;
+}
+
+.info-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    background: #5ac4cb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-family: "Open Sans";
+    transition: background-color 0.2s;
+}
+
+.info-btn:hover {
+    background: #4ab3ba;
+}
+
+.info-btn i {
+    transition: transform 0.2s;
+}
+
+.info-btn:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+} 

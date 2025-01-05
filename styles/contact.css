@@ -1,0 +1,225 @@
+/* Contact Page Layout */
+.contact-page {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 42px;
+    color: #3e3e3e;
+    font-weight: bold;
+    font-family: Tahoma;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.page-title:after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #5ac4cb;
+    margin: 20px auto 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-item {
+    margin-bottom: 40px;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(90, 196, 203, 0.1);
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-item i {
+    font-size: 32px;
+    color: #5ac4cb;
+    margin-bottom: 20px;
+    height: 70px;
+    width: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background: rgba(90, 196, 203, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover i {
+    background: #5ac4cb;
+    color: #fff;
+}
+
+.info-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+.info-item p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-item a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: relative;
+}
+
+.info-item a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #5ac4cb;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #5ac4cb;
+}
+
+.info-item a:hover:after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 15px;
+    font-family: "Open Sans";
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    font-family: "Open Sans";
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #5ac4cb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(90, 196, 203, 0.1);
+    background: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 18px;
+    background: #5ac4cb;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-button:hover {
+    background: #4ab3ba;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(90, 196, 203, 0.3);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .info-item {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    .info-item i {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        font-size: 24px;
+    }
+} 

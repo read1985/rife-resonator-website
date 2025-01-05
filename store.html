@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Rife Wave Resonators</title>
+    <meta name="description" content="Browse our selection of high-quality Rife Wave Resonators and accessories. Professional-grade frequency therapy devices for optimal wellness.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/newsletter.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/shop.js" defer></script>
+</head>
+<body>
+    <!-- Header will be the same as index.html -->
+    <header>
+        <div class="announcement-bar">
+            <p>Free Shipping on Orders Over $500 | 30-Day Money-Back Guarantee</p>
+        </div>
+        
+        <div class="top-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Rife Wave Resonators Logo">
+                    </a>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search products...">
+                        <button type="button"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="header-actions">
+                        <a href="account.html" class="account-link">
+                            <i class="fas fa-user"></i>
+                            <span>Account</span>
+                        </a>
+                        <a href="cart.html" class="cart-link">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Cart</span>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="shop.html">Shop</a></li>
+                    <li class="has-dropdown">
+                        <a href="information.html">Information</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="treatments-and-frequencies.html">Treatments and Frequencies</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="header-icons">
+                    <a href="#" class="cart-toggle">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="shop-page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Shop</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> / <span>Shop</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-content container">
+            <aside class="shop-sidebar">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <ul class="category-filter">
+                        <li><a href="#" data-category="all" class="active">All Products</a></li>
+                        <li><a href="#" data-category="resonators">Resonators</a></li>
+                        <li><a href="#" data-category="accessories">Accessories</a></li>
+                        <li><a href="#" data-category="packages">Packages</a></li>
+                    </ul>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Price Range</h3>
+                    <div class="price-filter">
+                        <input type="range" id="price-range" min="0" max="2500" step="100">
+                        <div class="price-inputs">
+                            <input type="number" id="min-price" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" id="max-price" placeholder="Max">
+                        </div>
+                        <button class="apply-price">Apply</button>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <h3>Features</h3>
+                    <div class="feature-filter">
+                        <label><input type="checkbox" value="portable"> Portable</label>
+                        <label><input type="checkbox" value="rechargeable"> Rechargeable</label>
+                        <label><input type="checkbox" value="touch-screen"> Touch Screen</label>
+                        <label><input type="checkbox" value="wireless"> Wireless</label>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="shop-main">
+                <div class="shop-controls">
+                    <div class="product-count">
+                        <span>Showing 1-12 of 24 products</span>
+                    </div>
+                    <div class="sort-by">
+                        <select>
+                            <option value="default">Default sorting</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge new">New</div>
+                        <img src="images/wave5-pro.jpg" alt="Wave5 Pro Resonator">
+                        <div class="product-info">
+                            <h3>Wave5 Pro Resonator</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(12 reviews)</span>
+                            </div>
+                            <p class="price">$1,995.00</p>
+                            <p class="description">Professional-grade resonator with advanced frequency capabilities and touch screen interface.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <a href="product-wave5-pro.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-badge sale">Sale</div>
+                        <img src="images/wave3.jpg" alt="Wave3 Resonator">
+                        <div class="product-info">
+                            <h3>Wave3 Resonator</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half"></i>
+                                <span>(8 reviews)</span>
+                            </div>
+                            <p class="price"><span class="original-price">$1,695.00</span> $1,495.00</p>
+                            <p class="description">Compact and powerful resonator perfect for home use with essential features.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <a href="product-wave3.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <img src="images/starter-kit.jpg" alt="Starter Kit Package">
+                        <div class="product-info">
+                            <h3>Starter Kit Package</h3>
+                            <div class="product-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(15 reviews)</span>
+                            </div>
+                            <p class="price">$2,495.00</p>
+                            <p class="description">Complete package including Wave3 resonator, accessories, and training materials.</p>
+                            <button class="add-to-cart">Add to Cart</button>
+                            <a href="product-starter-kit.html" class="view-details">View Details</a>
+                        </div>
+                    </div>
+
+                    <!-- Add more product cards as needed -->
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <span>...</span>
+                    <a href="#">Next</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer will be the same as index.html -->
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shipping.html">Shipping</a></li>
+                    <li><a href="returns.html">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <ul>
+                    <li><a href="frequency-lists.html">Frequency Lists</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> support@riferesonator.com</li>
+                    <li><i class="fas fa-phone"></i> 1-800-RIFE-NOW</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM-5PM EST</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for updates and special offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Rife Wave Resonators. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <button class="checkout-button">Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html> 

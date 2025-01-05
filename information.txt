@@ -1,0 +1,2937 @@
+
+<!DOCTYPE html>
+  <html itemscope itemtype="http://schema.org/WebPage" lang="en">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+
+      <link rel="dns-prefetch" href="https://static.web-repository.com">
+      <link rel="preconnect" href="https://static.web-repository.com">
+      <link rel="dns-prefetch" href="https://content.app-sources.com/">
+      <link rel="preconnect" href="https://content.app-sources.com/">
+      <link rel="preload" as="script" href="https://static.web-repository.com/scripts/platform.client.min.js?v=1038" />
+
+      <link rel="icon" href="https://content.app-sources.com/s/121499321421986301/uploads/Images/Wave_Technologies_Logo-6397034.jpg" />
+
+      <title>Wave Information</title>
+
+      <link rel="canonical" href="https://riferesonator.com/information" />
+      <meta property="og:url" content="https://riferesonator.com/information"/>
+      <meta itemprop="url" content="https://riferesonator.com/information"/>
+      <meta name="twitter:url" content="https://riferesonator.com/information"/>
+      <meta name="description" content="" />
+      <meta property="og:site_name" content="Wave Technologies" />
+      <meta property="og:title" content="Wave Information"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:description" content=""/>
+      <meta itemprop="name" content="Wave Information"/>
+      <meta itemprop="description" content=""/>
+      <meta name="twitter:title" content="Wave Information"/>
+      <meta name="twitter:card" content="summary"/>
+      <meta name="twitter:description" content=""/>
+      <script type="text/javascript">
+        var WebPlatform = window.WebPlatform || {};
+        WebPlatform.serviceApiDomain = "service-api.app-sources.com";
+        WebPlatform.hash = "wsPVsolIj4qMCWiYNxZ/lN61lez7V5bhbHFiriUKCY5OmV2gPtZeQF/E4e8vFB+1bGmIPfX/H//m8BN0kMe6TLeGAt+sMTyt07at6qonQn+pVplvEwcd8NSgBpesHoTwZUjQpUkx/XyUAwfS29gACuOzybEnP2r89kCF83Bqon+k4cWgdvCGJDL12YmavSEDJiJT2sCE5igqykfzkoHsq30bF3iQC6Nt16TJSl3Kfr7Q76GfQNu9DZfhukpC24P7VPNCAeDVdMsVsVTbVb+WGg==";
+        WebPlatform.cookiesDisclaimer = ''.trim();
+        WebPlatform.cookiesInfoBtn = "".trim();
+        WebPlatform.cookiesInfoBtnLink = "".trim();
+        WebPlatform.cookiesAcceptBtnText = "".trim() || 'OK';
+
+        WebPlatform.dateFormat = 'dd/mm/yy';
+        if (!WebPlatform.onReady) {
+          WebPlatform.documentReadyRequests = [];
+          WebPlatform.onReady = function (request) {
+            if (WebPlatform.documentReadyRequests === null)
+              request();
+            else
+              WebPlatform.documentReadyRequests.push(request);
+          };
+        }
+
+        if (window.disableDefaultGtagConsentModeSetup !== true) {
+          window.dataLayer = window.dataLayer || [];
+          window.defaultGoogleConsentState = 'granted';
+          function gtag() { dataLayer.push(arguments); }
+          let defaultStateValue = window.defaultGoogleConsentState || 'denied'; // or granted
+          let defaultState = {
+            'ad_storage': defaultStateValue,
+            'ad_user_data': defaultStateValue,
+            'ad_personalization': defaultStateValue,
+            'analytics_storage': defaultStateValue
+          };
+          try {
+            let savedState = localStorage.getItem('gtagConsentModeSavedState');
+            if (savedState) {
+              defaultState = JSON.parse(savedState) || defaultState;
+            }
+          } catch (ex) {
+          }
+          defaultState.wait_for_update = 500;
+          gtag('consent', 'default', defaultState);
+        }
+
+        if (!WebPlatform.merge) {
+          WebPlatform.merge = function (target, source) {
+            for (var key in source)
+              if ((typeof target[key] === "undefined") || target[key] === '')
+                target[key] = source[key];
+            return target;
+          };
+        }
+      </script>
+      <link rel="preload stylesheet" as="style" media="all" href="https://static.web-repository.com/styles/platform.client.min.css?v=1038" />
+        <link rel="preload stylesheet" as="style"
+            href="https://static.web-repository.com/t/theme25/css/trunk.min.css?v=1038" id="style-default" class="stylesheet" />
+
+      <link rel="preload stylesheet" as="style" media="(max-width: 1024px)"
+            href="https://static.web-repository.com/t/theme25/css/trunk-1024.min.css?v=1038" id="style-1024" class="stylesheet" />
+
+      <link rel="preload stylesheet" as="style" media="(max-width: 768px)"
+            href="https://static.web-repository.com/t/theme25/css/trunk-768.min.css?v=1038" id="style-768" class="stylesheet" />
+
+      <link rel="preload stylesheet" as="style" media="(max-width: 480px)"
+            href="https://static.web-repository.com/t/theme25/css/trunk-480.min.css?v=1038" id="style-480" class="stylesheet"/>
+
+      <meta property="og:image" content="https://content.app-sources.com/s/121499321421986301/uploads/Images/Wave_Technologies_Logo-6397034.jpg" />
+        <meta itemprop="image" content="https://content.app-sources.com/s/121499321421986301/uploads/Images/Wave_Technologies_Logo-6397034.jpg" />
+        <meta name="twitter:image" content="https://content.app-sources.com/s/121499321421986301/uploads/Images/Wave_Technologies_Logo-6397034.jpg"/>
+      <style type="text/css" id="global-styles">
+  
+
+  :root {
+    --color-primary: rgba(82, 167, 167, 1);
+    --color-secondary1: #028090;
+    --color-secondary2: #00A896;
+    --color-secondary3: #02C39A;
+    --color-secondary4: #F0F3BD;
+  }
+
+  
+    .theme .color-primary, .color-primary {
+      color: rgba(82, 167, 167, 1);
+    }
+    .theme .bg-color-primary, .bg-color-primary {
+      background-color: rgba(82, 167, 167, 1);
+    }
+    .theme .border-color-primary, .border-color-primary {
+      border-color: rgba(82, 167, 167, 1);
+    }
+    .theme .fill-color-primary, .fill-color-primary {
+      fill: rgba(82, 167, 167, 1);
+    }
+  
+    .theme .color-secondary1, .color-secondary1 {
+      color: #028090;
+    }
+    .theme .bg-color-secondary1, .bg-color-secondary1 {
+      background-color: #028090;
+    }
+    .theme .border-color-secondary1, .border-color-secondary1 {
+      border-color: #028090;
+    }
+    .theme .fill-color-secondary1, .fill-color-secondary1 {
+      fill: #028090;
+    }
+  
+    .theme .color-secondary2, .color-secondary2 {
+      color: #00A896;
+    }
+    .theme .bg-color-secondary2, .bg-color-secondary2 {
+      background-color: #00A896;
+    }
+    .theme .border-color-secondary2, .border-color-secondary2 {
+      border-color: #00A896;
+    }
+    .theme .fill-color-secondary2, .fill-color-secondary2 {
+      fill: #00A896;
+    }
+  
+    .theme .color-secondary3, .color-secondary3 {
+      color: #02C39A;
+    }
+    .theme .bg-color-secondary3, .bg-color-secondary3 {
+      background-color: #02C39A;
+    }
+    .theme .border-color-secondary3, .border-color-secondary3 {
+      border-color: #02C39A;
+    }
+    .theme .fill-color-secondary3, .fill-color-secondary3 {
+      fill: #02C39A;
+    }
+  
+    .theme .color-secondary4, .color-secondary4 {
+      color: #F0F3BD;
+    }
+    .theme .bg-color-secondary4, .bg-color-secondary4 {
+      background-color: #F0F3BD;
+    }
+    .theme .border-color-secondary4, .border-color-secondary4 {
+      border-color: #F0F3BD;
+    }
+    .theme .fill-color-secondary4, .fill-color-secondary4 {
+      fill: #F0F3BD;
+    }
+  
+    .note-editable.panel-body h1, 
+    .text-widget-content h1,
+    .post-description h1 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 72px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h2, 
+    .text-widget-content h2,
+    .post-description h2 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 42px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h3, 
+    .text-widget-content h3,
+    .post-description h3 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 28px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h4, 
+    .text-widget-content h4,
+    .post-description h4 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 18px;
+      color: rgba(82, 167, 167, 1);
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h5, 
+    .text-widget-content h5,
+    .post-description h5 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 18px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h6, 
+    .text-widget-content h6,
+    .post-description h6 {
+      font-family: Tahoma, arial;
+      line-height: 1em;
+      font-size: 15px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+        .note-editable.panel-body li, 
+        .text-widget-content li, 
+      
+    .note-editable.panel-body p, 
+    .text-widget-content p,
+    .post-description p {
+      font-family: Tahoma, arial;
+      line-height: 1.6em;
+      font-size: 16px;
+      color: rgba(84, 84, 84, 1);
+      
+          letter-spacing: normal;
+        
+    }
+  
+        .note-editable.panel-body blockquote > p,
+        .text-widget-content blockquote > p,
+      
+    .note-editable.panel-body blockquote, 
+    .text-widget-content blockquote,
+    .post-description blockquote {
+      font-family: Tahoma, arial;
+      line-height: 1.6em;
+      font-size: 15px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    body {}
+    @media screen and (max-width: 768px) {
+     .note-editable.panel-body h1, 
+       .text-widget-content h1 {
+        font-family: Ropa Sans;
+        line-height: 1em;
+        font-size: 48px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h2, 
+       .text-widget-content h2 {
+        font-family: Ropa Sans;
+        line-height: 1em;
+        font-size: 32px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h3, 
+       .text-widget-content h3 {
+        font-family: Ropa Sans;
+        line-height: 1em;
+        font-size: 26px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h4, 
+       .text-widget-content h4 {
+        font-family: Ropa Sans;
+        line-height: 1em;
+        font-size: 18px !important;
+        color: rgba(82, 167, 167, 1);
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h5, 
+       .text-widget-content h5 {
+        font-family: Ropa Sans;
+        line-height: 1em;
+        font-size: 18px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h6, 
+       .text-widget-content h6 {
+        font-family: Open Sans;
+        line-height: 1em;
+        font-size: 14px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body li, 
+           .text-widget-content li,    
+         .note-editable.panel-body p, 
+       .text-widget-content p {
+        font-family: Open Sans;
+        line-height: 1.6em;
+        font-size: 14px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body blockquote > p,
+           .text-widget-content blockquote > p,
+         .note-editable.panel-body blockquote, 
+       .text-widget-content blockquote {
+        font-family: Open Sans;
+        line-height: 1.6em;
+        font-size: 14px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+    
+      body {}
+    }
+  
+
+  .page-layout:not(.style-boxed-layout) .grid-content,
+  .theme .page-layout:not(.style-boxed-layout) .container,
+  .page-layout.header-layout-floating:not(.style-boxed-layout) .main-header-wrapper,
+  .page-layout.fixed-header-layout-floating:not(.style-boxed-layout) .fixed-header-wrapper,
+  .mega-menu-inner, .megamenu-settings-wrapper {
+    max-width: 1100px;
+  }
+
+  .style-boxed-layout.page-layout,
+  .theme .style-boxed-layout .fixed-header-wrapper, 
+  .theme .style-boxed-layout .fixed-header-wrapper.visible,
+  #website.theme .fixed-header-layout-floating .fixed-header-wrapper, 
+  #website.theme .fixed-header-layout-floating .fixed-header-wrapper.visible
+  {
+    width: 1100px;
+  }
+  /*
+    #website.theme .header-layout-floating .fixed-header-wrapper, 
+    #website.theme .header-layout-floating .fixed-header-wrapper.visible {
+      width: 1100px;
+    }*/
+  /*
+    #website.theme .fixed-header-layout-floating .fixed-header-wrapper, 
+    #website.theme .fixed-header-layout-floating .fixed-header-wrapper.visible {
+      width: calc(1100px - 130px) !important;
+  }
+  */
+  .style-boxed-layout .grid-content,
+  .style-boxed-layout .container,
+  .style-boxed-layout.header-layout-floating .main-header-wrapper,
+  .style-boxed-layout.fixed-header-layout-floating .fixed-header-wrapper {
+    max-width: 90%;
+  }
+
+  .note-editable.panel-body a,
+  .text-widget-content a {
+    color: ;
+    text-decoration: none;
+  }
+
+  .note-editable.panel-body a:hover,
+  .text-widget-content a:hover {
+    color: ;
+    text-decoration: none;
+  }
+
+  .theme .page-layout {
+    background: #ffffff;
+  }
+
+  .theme .primaryColor,
+  .theme .highlightColor:hover,
+  .theme .smaller .highlightColor:hover,
+  .theme .highlightColor.active,
+  .portfolio-filter ul li.active a, 
+  .portfolio-filter ul li a:hover,
+  .portfolio-list-wrapper .image-overlay a:hover,
+  .portfolio-widget-item .primaryColor-bg2:hover,
+  .tmdp-pagination [data-role]:hover i, .blog-back-btn:hover i,
+  .products-filter-style-1 ul li.active a,
+  .products-filter-style-1 ul li a:hover,
+  .side-filter .products-filter section > ul > li.active > a,
+  .side-filter .products-filter section > ul > li:hover > a,
+  .side-filter .products-filter section ul li li:hover > a,
+  .side-filter .products-filter section ul li li.active > a,
+  .has-subcategories div:hover:before,
+  .store6 .product-item-description .product-item-price,
+  .post-category a,
+  .login-question a,
+  .promo-code-toggle-btn,
+  .steps-nav-wrapper a.active,
+  .steps-nav-wrapper a:hover,
+  .steps-nav-wrapper a.active:after,
+  .box-select h5,
+  .quick-view-wrapper .product-body-container .quick-view-title a:hover,
+  .theme .view-details-btn,
+  .products-filter .search-form button:hover:after,
+  .product-characteristics:hover,
+  .product-reviews-link:hover,
+  .theme .profile-sidebar li:hover a,
+  .member-logout-button
+  {
+    color: rgba(82, 167, 167, 1) !important;
+  }
+
+  .cart-table.style-2 .fake-checkbox.checked,
+  .cart-table.style-2 .fake-checkbox:hover:before {
+    border: 2px solid rgba(82, 167, 167, 1);
+  }
+
+  .theme .active > .website-nav-link {
+    color: rgba(82, 167, 167, 1);
+  }
+
+  .theme .primaryColor-bg:hover,
+  .tmdp-pagination [data-role="0"],
+  .theme .active .primaryColor-bg {
+    background-color: rgba(82, 167, 167, 1);
+    border-color: rgba(82, 167, 167, 1);
+  }
+
+  .theme .active .primaryColor-bg,
+  .theme .primaryColor-bg:hover,
+  .theme .smaller .primaryColor-bg:hover,
+  .theme .smaller .active .primaryColor-bg {
+    color: #fff !important;
+  }
+
+  .theme .signin-button:hover svg,
+  .theme .cart-button:hover svg,
+  .theme .signin-button.active svg,
+  .theme .cart-button.active svg,
+  .theme .smaller .signin-button:hover svg,
+  .theme .smaller .cart-button:hover svg,
+  .theme .smaller .signin-button.active svg,
+  .theme .smaller .cart-button.active svg,
+  .booking-final-step .booking-name svg {
+    fill: rgba(82, 167, 167, 1);
+  }
+
+  .theme .primaryColor-bg2, 
+  .top-bar .social-media i,
+  .theme .read-more,
+  .blog-comment-form a:hover,
+  .theme .buttons-wrapper-outer .primaryColor-bg2,
+  .product-main-photo.has-badge:after,
+  .live-theme .ui-widget-header,
+  nav li a:before,
+  .store2 .product-item .product-badge,
+  .theme .profile-sidebar li a:after,
+  .vertical-menu-styling.design-4 li:after,
+  .live-theme-message a,
+  .next-step-popup svg,
+  .form-field .custom-checkbox input[type=checkbox]:checked + .custom-checkbox-label:before,
+  .form-field .custom-checkbox input[type=radio]:checked + .custom-checkbox-label:before,
+  .elite-widget ul li.active a:after,
+  .elite-tab-call-to-action,
+  .cart-title:after,
+  .product-tabs li a.active:after,
+  .checkout-style-2 .checkout-step.active,
+  .live-theme .widget-checkout .checkout-info span .variations-update, 
+  .product-info .variations-update,
+  .fake-checkbox.checked:before,
+  .bump-active .tick-wrapper:before,
+  .title-border,
+  .theme .manage-link,
+  .theme .profile-sidebar li a.active,
+  .copy-link-icon,
+  .fake-checkbox:hover:before,
+  .grid-content-store .product-price .price-discount-tag,
+  .variation-wrapper-radio .box-select.active:before,
+  .variation-wrapper-check .box-select.active:before,
+  .product-photo-list li a.active:after,
+  .product-photo-list li a:hover:after,
+  .next-step-popup.cart-preview-full-height a
+  {
+    background-color: rgba(82, 167, 167, 1);
+  }
+
+  .theme .border-color,
+  article blockquote,
+  .theme nav li ul,
+  .theme .primaryColor-border, 
+  blockquote,
+  .portfolio-filter ul li.active a,
+  .tmdp-pagination [data-role]:hover, .blog-back-btn:hover,
+  .theme .profile-sidebar li a.active,
+  .products-filter-style-1 ul li.active a,
+  .pagination-wrapper li a:hover, .pagination-wrapper li.active a,
+  .products-filter-style-2 li.active a,
+  .vertical-menu-styling.design-2 li:hover,
+  .vertical-menu-styling.design-2 li.active,
+  .vertical-menu-styling.design-3 li:hover,
+  .vertical-menu-styling.design-3 li.active,
+  .form-field .custom-checkbox input[type=checkbox]:checked + .custom-checkbox-label:before,
+  .form-field .custom-checkbox input[type=radio]:checked + .custom-checkbox-label:before,
+  /*.select-wrapper.style-1 ul li a.active,
+  .select-wrapper.style-1 ul li a:hover,
+  .select-wrapper.style-2 ul li a.active,
+  .select-wrapper.style-2 ul li a:hover,
+  .select-wrapper.style-3 ul li a.active,
+  .select-wrapper.style-3 ul li a:hover,
+  .select-wrapper.style-1 ul li a.active:before,
+  .select-wrapper.style-2 ul li a.active:before,
+  .select-wrapper.style-3 ul li a.active:before,*/
+  .box-select.active, .box-select:hover,
+  .circle-select:hover, 
+  .circle-select.active, 
+  .color-select.active, 
+  .color-select:hover,
+  .checkout-style-1 .checkout-step.active, 
+  .checkout-style-1 .checkout-step:hover,
+  .fake-checkbox.checked:before,
+  .bump-active .tick-wrapper:before,
+  .variation-wrapper-radio .box-select.active:before,
+  .variation-wrapper-check .box-select.active:before
+  {
+    border-color: rgba(82, 167, 167, 1);
+  }
+
+  .theme .header-side-style-1 nav ul li.website-nav-link-highlighted > a,
+  .theme .header-side-style-1a nav ul li.website-nav-link-highlighted >a {
+    border-color: rgba(82, 167, 167, 1);
+  }
+
+  .checkout-spinner {
+    border-color: rgba(82, 167, 167, 1);
+    border-top-color: rgba(0, 0, 0, .2);
+    border-right-color: rgba(0, 0, 0, .2);
+    border-bottom-color: rgba(0, 0, 0, .2);
+  }
+
+  .tmdp-slides-loading,
+  #client-ajax-message,
+  #portfolio-popup-content.active-loading, 
+  #tmdp-simple-lightbox-content.active-loading,
+  .loader.active-loading {
+    border-left-color: rgba(82, 167, 167, 1);
+  }
+
+  .posts-list-wrapper .post-title a,
+  article .post-meta a, 
+  article .post-meta p,
+  .portfolio-filter li a,
+  .product-item-description h3,
+  .product-item-description .product-item-price,
+  .breadcrumb li a, .breadcrumb li span,
+  .product-body-container h2,
+  .product-page-style-image-top .product-price span,
+  article .post-meta span,
+  .theme .post-title,
+  .comments-list .comment-title,
+  .blog-tag-cloud a,
+  .post-categories,
+  .checkout-wrapper h2,
+  .checkout-wrapper .cart-labels span,
+  .checkout-wrapper .product-info a,
+  .checkout-wrapper .cart-container .qty, 
+  .checkout-wrapper .cart-container .row-total,
+  .checkout-wrapper .subtotal-wrapper span,
+  .live-theme .checkout-wrapper .promo-code-toggle-btn,
+  .checkout-wrapper .cart-container .row-delete i,
+  .product-price span,
+  .products-showing span,
+  .filter-lane label,
+  .products-filter-style-2 li a,
+  .product-body-container h1,
+  .checkout-wrapper h1,
+  .no-items-text
+  {
+    color: #3e3e3e;
+  }
+
+  .tmdp-bullets .tmdp-bullet:hover, 
+  .tmdp-bullets .tmdp-bullet.active,
+  .side-filter .products-filter ul li a:hover:before,
+  .side-filter .products-filter ul li.active > a:before {
+    background: rgba(82, 167, 167, 1) !important;
+    border-color: rgba(82, 167, 167, 1) !important;
+  }
+
+  .theme .highlightBg:hover {
+    background: rgba(82, 167, 167, 1);
+    color: #fff !important;
+  }
+
+  .theme .theme18 .navigation-wrapper .active > .website-nav-link {
+    background: rgba(82, 167, 167, 1);
+    color: #fff;
+  }
+
+  .theme .theme18 .navigation-wrapper .active>a:hover {
+    color: #fff !important;
+  }
+
+  </style><style type="text/css">
+  </style>
+
+<link  rel="preload stylesheet" as="style" href='//fonts.googleapis.com/css?display=swap&family=Ropa+Sans:regular%7CHind+Siliguri:500'>
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16811473241"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16811473241');
+</script><!-- /><div></div> */</script> /**/ <!-- -->
+        
+      <!-- Facebook Pixel Code -->
+      <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1488614158471435');
+        fbq('track', 'PageView');
+      </script>
+      <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id=1488614158471435&ev=PageView&noscript=1"/>
+      </noscript>
+      <!-- End Facebook Pixel Code -->
+      </head>
+    <body class="theme live-theme " data-resources="https://static.web-repository.com" data-content="https://content.app-sources.com/" data-locale="en" data-ver="1038" data-minor="1038.13013.1193219.909940466"  data-ali="0">
+      <div 
+      
+          class="style-full-width-layout page-layout theme25 clearfix header-layout-fullwidth">
+          <div class="header-wrapper main-header-wrapper horizontal-header-wrapper ">
+          <div class="header-row  has-border  header-row-main"
+                   style="background-color: #ffffff;border-bottom-color: rgba(233, 233, 233, 1);">
+                <div class="header-row-space top" style="height: 0px"></div>
+                <div class="flex flex-row align-center flex-header container relative">
+                  <div class="flex-1 header-widget-container flex flex-row">
+                    <div class="header-widget-space" style="width: 7px"></div>
+                        <div class="header-widget" id="header-widget-1531565329803"
+         data-type="headers/Logo">
+      <div class="theme-logo" data-role="logo">
+          <a href="//riferesonator.com" rel="home">
+          <span>
+            <img src="https://content.app-sources.com/s/504150853341143101/uploads/Images/Wave_Technologies_Logo-3523217.png?format=webp" alt="Wave Technologies" style="max-height: 100px;" />
+              </span>
+        </a>
+      </div>
+    </div>
+  </div>
+                  <div class="flex-none header-widget-container flex flex-row">
+                    </div>
+                  <div class="flex-1 header-widget-container flex flex-row justify-flex-end">
+                    <div class="header-widget" id="header-widget-1531565337992" data-type="headers/Icon">
+      <div class="icon">
+            <i class="fa fa-at" 
+               style="color: rgba(90, 196, 203, 1); font-size: 30px;"></i>
+          </div>
+        </div>
+  <div class="header-widget-space" style="width: 13px"></div>
+                        <div class="header-widget" id="header-widget-1531565337991"
+         data-type="headers/Text">
+      <!--textWidget-->
+
+      <div class="text-widget-content"><p style="line-height: 1.4;"><span style="color: rgb(106, 106, 106); font-family: &quot;Hind Siliguri&quot;; font-size: 18px;"><a href="mailto:info@riferesonator.com">info@riferesonator.com</a></span></p></div>
+    </div>
+  <div class="header-widget-space" style="width: 20px"></div>
+                        </div>
+                </div>
+                <div class="header-row-space bottom" style="height: 23px"></div>
+              </div>
+            <div class="header-row  header-row-bottom"
+                   style="background-color: rgba(32, 32, 32, 1);">
+                <div class="header-row-space top" style="height: 0px"></div>
+                <div class="flex flex-row align-center flex-header container relative">
+                  <div class="flex-1 header-widget-container flex flex-row">
+                    <div class="header-widget-space" style="width: 0px"></div>
+                        
+
+
+
+  
+    <div class="header-widget" id="header-widget-1531565329804"
+         data-type="headers/Menu">
+      
+
+      <style type="text/css">
+        #header-widget-1531565329804 nav > ul > li > a.website-nav-link {
+          padding: 24px;
+        }
+
+        #header-widget-1531565329804  ul li a.website-nav-link {
+          font-size: 18px;
+          font-family: Ropa Sans;
+          color: rgba(255, 255, 255, 1);
+          
+        }
+
+        #header-widget-1531565329804 .before, 
+        #header-widget-1531565329804 .after, 
+        #header-widget-1531565329804 .middle {
+          background: #3e3e3e;
+        }
+
+        #header-widget-1531565329804 .burger-menu-visible .before, 
+        #header-widget-1531565329804 .burger-menu-visible .after, 
+        #header-widget-1531565329804 .burger-menu-visible .middle {
+          background: rgba(255, 255, 255, 1);
+        }
+
+        #header-widget-1531565329804 nav > ul > li:hover a.website-nav-link,
+        #header-widget-1531565329804 nav > ul > li.active a.website-nav-link,
+        #header-widget-1531565329804 .overlay nav li:hover > div > ul li a.website-nav-link:hover {
+          color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 .with-background nav > ul > li:hover > a, 
+        #header-widget-1531565329804 .with-background nav > ul > li.active > a {
+          background-color: transparent;
+          border-radius: 0px;
+        }
+
+        #header-widget-1531565329804 .with-border li:hover:before,
+        #header-widget-1531565329804 .with-border li.active:before,
+        #header-widget-1531565329804 .border-below li:hover a.website-nav-link:after, 
+        #header-widget-1531565329804 .border-below li.active a.website-nav-link:after {
+          background: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 .border-at-left nav > ul > li.active,
+        #header-widget-1531565329804 .border-at-left nav > ul > li:hover {
+          border-color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 .border-below nav > ul > li:after.active,
+        #header-widget-1531565329804 .border-below nav > ul > li:after:hover {
+          background: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 nav li:hover > div > ul.with-border {
+          border: 1px solid #3e3e3e;
+          background-color: #ffffff;
+        }
+
+        #header-widget-1531565329804 nav li:hover > div > ul,
+        #header-widget-1531565329804 nav li.visible > div > ul {
+          background-color: #ffffff;
+        }
+
+        #header-widget-1531565329804 nav li:hover > div > ul li a.website-nav-link,
+        #header-widget-1531565329804 nav li.visible > div > ul li a.website-nav-link {
+          color: #6a6a6a;
+        }
+
+        #header-widget-1531565329804 nav li:hover > div > ul li a.website-nav-link:hover {
+          color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 .vertical-menu-styling.design-1 nav > ul > li,
+        #header-widget-1531565329804 .vertical-menu-styling.design-3 nav > ul > li {
+          border-color: #3e3e3e;
+        }
+
+        #header-widget-1531565329804 .vertical-menu-styling.border-below.left li:after {
+          background-color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804 .overlay nav li > div > ul > li > a.website-nav-link {
+          color: rgba(255, 255, 255, 1);
+        }
+
+        #header-widget-1531565329804 .horizontal-menu-styling.with-divider nav > ul > li:after {
+          background-color: #CCCCCC;
+        }
+      </style>
+
+      <div class=" right-submenu menu-widget with-border   
+           
+             left mobile-column horizontal-menu-styling"
+           style="background: transparent">
+
+        
+          <nav class="mobile-headerBackgroundColor">
+            <ul class="clearfix">
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/home"
+                     >
+                    Home
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/store"
+                     >
+                    Store
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/about-us"
+                     >
+                    About Us
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class="active  with-submenu">
+                  
+                  <a class="website-nav-link" rel="tab" href="/information"
+                     >
+                    Information
+                    
+                      <i class="submenu-arrow fa fa-angle-right"></i>
+                    
+                  </a>
+
+                  
+                    <div>
+                      <ul class="with-submenu-shadow ">
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/treatments-and-frequencies" >Treatments and Frequencies</a>
+                          </li>
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/technical" >Technical</a>
+                          </li>
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/legal" >Legality</a>
+                          </li>
+                        
+                      </ul>
+                    </div>
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/blog"
+                     >
+                    Blog
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/contact-us"
+                     >
+                    Contact Us
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+            </ul>
+          </nav>
+          
+      </div> 
+    </div>
+  
+</div>
+                  <div class="flex-none header-widget-container flex flex-row">
+                    </div>
+                  <div class="flex-1 header-widget-container flex flex-row justify-flex-end">
+                    <div class="header-widget" id="header-widget-1541879772094" data-type="headers/Cart">
+      <style type="text/css">
+        #header-widget-1541879772094 .shopping-cart:hover .text,
+        #header-widget-1541879772094 .shopping-cart:hover i {
+          color: rgba(82, 167, 167, 1) !important;
+        }
+
+        #header-widget-1541879772094 .shopping-cart:hover .store-cart-button svg {
+          fill: rgba(82, 167, 167, 1) !important;
+        }
+
+        #header-widget-1541879772094 .shopping-cart .store-cart-button svg {
+          fill: rgba(255, 255, 255, 1) !important;
+        }
+      </style>
+
+      <script>
+          WebPlatform.onReady(() => {
+            WebPlatform.getSessionDetails(details => {
+              const root = $('#header-widget-1541879772094');
+              if (details.cartSize) {
+                $('.shopping-cart').removeClass('none'); // includes the mobile shopping cart!
+                $('.cart-items-number').removeClass('none').text(details.cartSize); 
+              }
+            });
+          });
+        </script>
+      <div class="shopping-cart  with-quick-cart ">
+        <div class="cart-button">
+          <a href="/store/cart" class="store-cart-button">
+            <svg enable-background="new 0 0 96 96" height="96px" id="bag" version="1.1" viewBox="0 0 96 96" width="96px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 24 24; width: 24px; height: 24px;">
+              <path d="M68,24v-4C68,8.954,59.046,0,48,0S28,8.954,28,20v4H12v60c0,6.63,5.37,12,12,12h48c6.63,0,12-5.37,12-12V24H68z M36,20  c0-6.627,5.373-12,12-12c6.627,0,12,5.373,12,12v4H36V20z M76,84c0,2.21-1.79,4-4,4H24c-2.21,0-4-1.79-4-4V32h56V84z"/>
+            </svg>
+            <span class="cart-items-number primaryColor-bg2 none"></span>
+            <span class="text  none " 
+                  style="font-size: 14px; color: rgba(255, 255, 255, 1);">
+              Cart</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  <div class="header-widget-space" style="width: 16px"></div>
+                        <div class="header-widget" id="header-widget-1713769064311" data-type="headers/Icon">
+      <div class="icon">
+            <i class="fa fa-heart-o" 
+               style="color: rgba(255, 255, 255, 1); font-size: 22px;"></i>
+          </div>
+        </div>
+  <div class="header-widget-space" style="width: 54px"></div>
+                        </div>
+                </div>
+                <div class="header-row-space bottom" style="height: 0px"></div>
+              </div>
+            </div>
+      <div class="mobile-header-overlay"></div>
+  <div class="mobile-menu "
+       style="background: #ffffff">
+    <ul class="navToggle burger slide mobile-burger">
+        <li class="before"></li>
+        <li class="middle"></li>
+        <li class="after"></li> 
+      </ul>
+    <div class="mobile-menu-logo">
+      <div class="header-widget" id="header-widget-1531565329803-mobile"
+         data-type="headers/Logo">
+      <div class="theme-logo" data-role="logo">
+          <a href="//riferesonator.com" rel="home">
+          <span>
+            <img src="https://content.app-sources.com/s/504150853341143101/uploads/Images/Wave_Technologies_Logo-3523217.png?format=webp" alt="Wave Technologies" style="max-height: 100px;" />
+              </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    <style type="text/css">
+            @media screen and (max-width: 768px) {
+              .mobile-menu .header-widget > .text-widget-content span,
+              .mobile-menu .header-widget > .text-widget-content p,
+              .mobile-menu .header-widget > .text-widget-content a,
+              .mobile-menu .header-widget > .text-widget-content blockquote,
+              .mobile-menu .header-widget > .text-widget-content h1,
+              .mobile-menu .header-widget > .text-widget-content h2,
+              .mobile-menu .header-widget > .text-widget-content h3,
+              .mobile-menu .header-widget > .text-widget-content h4,
+              .mobile-menu .header-widget > .text-widget-content h5,
+              .mobile-menu .header-widget > .text-widget-content h6 {
+                color: rgba(255, 255, 255, 1) !important;
+              }
+            }
+          </style>
+        <div class="mobile-header-wrapper " style="background: rgba(32, 32, 32, 1)">
+        
+
+
+
+  
+    <div class="header-widget" id="header-widget-1531565329804-mobile"
+         data-type="headers/Menu">
+      
+
+      <style type="text/css">
+        #header-widget-1531565329804-mobile nav > ul > li > a.website-nav-link {
+          padding: 24px;
+        }
+
+        #header-widget-1531565329804-mobile  ul li a.website-nav-link {
+          font-size: 18px;
+          font-family: Ropa Sans;
+          color: rgba(255, 255, 255, 1);
+          
+        }
+
+        #header-widget-1531565329804-mobile .before, 
+        #header-widget-1531565329804-mobile .after, 
+        #header-widget-1531565329804-mobile .middle {
+          background: #3e3e3e;
+        }
+
+        #header-widget-1531565329804-mobile .burger-menu-visible .before, 
+        #header-widget-1531565329804-mobile .burger-menu-visible .after, 
+        #header-widget-1531565329804-mobile .burger-menu-visible .middle {
+          background: rgba(255, 255, 255, 1);
+        }
+
+        #header-widget-1531565329804-mobile nav > ul > li:hover a.website-nav-link,
+        #header-widget-1531565329804-mobile nav > ul > li.active a.website-nav-link,
+        #header-widget-1531565329804-mobile .overlay nav li:hover > div > ul li a.website-nav-link:hover {
+          color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile .with-background nav > ul > li:hover > a, 
+        #header-widget-1531565329804-mobile .with-background nav > ul > li.active > a {
+          background-color: transparent;
+          border-radius: 0px;
+        }
+
+        #header-widget-1531565329804-mobile .with-border li:hover:before,
+        #header-widget-1531565329804-mobile .with-border li.active:before,
+        #header-widget-1531565329804-mobile .border-below li:hover a.website-nav-link:after, 
+        #header-widget-1531565329804-mobile .border-below li.active a.website-nav-link:after {
+          background: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile .border-at-left nav > ul > li.active,
+        #header-widget-1531565329804-mobile .border-at-left nav > ul > li:hover {
+          border-color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile .border-below nav > ul > li:after.active,
+        #header-widget-1531565329804-mobile .border-below nav > ul > li:after:hover {
+          background: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile nav li:hover > div > ul.with-border {
+          border: 1px solid #3e3e3e;
+          background-color: #ffffff;
+        }
+
+        #header-widget-1531565329804-mobile nav li:hover > div > ul,
+        #header-widget-1531565329804-mobile nav li.visible > div > ul {
+          background-color: #ffffff;
+        }
+
+        #header-widget-1531565329804-mobile nav li:hover > div > ul li a.website-nav-link,
+        #header-widget-1531565329804-mobile nav li.visible > div > ul li a.website-nav-link {
+          color: #6a6a6a;
+        }
+
+        #header-widget-1531565329804-mobile nav li:hover > div > ul li a.website-nav-link:hover {
+          color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile .vertical-menu-styling.design-1 nav > ul > li,
+        #header-widget-1531565329804-mobile .vertical-menu-styling.design-3 nav > ul > li {
+          border-color: #3e3e3e;
+        }
+
+        #header-widget-1531565329804-mobile .vertical-menu-styling.border-below.left li:after {
+          background-color: rgba(82, 167, 167, 1);
+        }
+
+        #header-widget-1531565329804-mobile .overlay nav li > div > ul > li > a.website-nav-link {
+          color: rgba(255, 255, 255, 1);
+        }
+
+        #header-widget-1531565329804-mobile .horizontal-menu-styling.with-divider nav > ul > li:after {
+          background-color: #CCCCCC;
+        }
+      </style>
+
+      <div class=" right-submenu menu-widget with-border   
+           
+           design-4 center mobile-column vertical-menu-styling"
+           style="background: transparent">
+
+        
+          <nav class="mobile-headerBackgroundColor">
+            <ul class="clearfix">
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/home"
+                     >
+                    Home
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/store"
+                     >
+                    Store
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/about-us"
+                     >
+                    About Us
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class="active  with-submenu">
+                  
+                  <a class="website-nav-link" rel="tab" href="/information"
+                     >
+                    Information
+                    
+                      <i class="submenu-arrow fa fa-angle-right"></i>
+                    
+                  </a>
+
+                  
+                    <div>
+                      <ul class="with-submenu-shadow ">
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/treatments-and-frequencies" >Treatments and Frequencies</a>
+                          </li>
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/technical" >Technical</a>
+                          </li>
+                        
+                          <li>
+                            
+                            
+                            <a class="website-nav-link" rel="tab" href="/legal" >Legality</a>
+                          </li>
+                        
+                      </ul>
+                    </div>
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/blog"
+                     >
+                    Blog
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+                
+                
+                
+                
+                <li  class=" ">
+                  
+                  <a class="website-nav-link" rel="tab" href="/contact-us"
+                     >
+                    Contact Us
+                    
+                  </a>
+
+                  
+                  
+                  
+                </li>
+              
+            </ul>
+          </nav>
+          
+      </div> 
+    </div>
+  
+<div class="header-widget" id="header-widget-1531565337991-mobile"
+         data-type="headers/Text">
+      <!--textWidget-->
+
+      <div class="text-widget-content"><p style="line-height: 1.4;"><span style="color: rgb(106, 106, 106); font-family: &quot;Hind Siliguri&quot;; font-size: 18px;"><a href="mailto:info@riferesonator.com">info@riferesonator.com</a></span></p></div>
+    </div>
+  </div>
+    <ul class="shopping-cart shopping-cart-mobile none  with-quick-cart ">
+      <li class="cart-button">
+        <a href="/store/cart" class="website-nav-link" title="Cart">
+          <svg enable-background="new 0 0 96 96" height="96px" id="bag" version="1.1" viewBox="0 0 96 96" width="24px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="enable-background:new 0 0 24 24; width: 24px; height: 24px;
+                 fill: #3e3e3e;"><path d="M68,24v-4C68,8.954,59.046,0,48,0S28,8.954,28,20v4H12v60c0,6.63,5.37,12,12,12h48c6.63,0,12-5.37,12-12V24H68z M36,20  c0-6.627,5.373-12,12-12c6.627,0,12,5.373,12,12v4H36V20z M76,84c0,2.21-1.79,4-4,4H24c-2.21,0-4-1.79-4-4V32h56V84z"></path></svg>
+          <span class="cart-items-number primaryColor-bg2"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+<a class="scrollToTop transition-all fa fa-angle-up" title="Scroll To Top"></a>
+
+      <div class="content slide">
+        <div class="content-wrapper">
+      <div class="content">
+        <div 
+      
+      id="container-widget-1724231127235"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:4.98915%;
+      padding-top: 3.03688%; padding-left: 0;
+      background-color: rgba(40, 43, 48, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 10%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div><div class="grid-column    " 
+                 style="width: 80%;
+                 padding-left:0%;padding-right:0%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127234"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0%; margin-left: 0px;">
+      <div class="text-widget-content"><p style="text-align: center;"><span style="color: rgb(82, 167, 167); font-family: Tahoma; font-size: 18px;">Everything you need to know</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127233"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: center;"><span style="font-weight: bold; color: rgb(255, 255, 255); font-family: Tahoma; font-size: 48px;">Information</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive col7" id="separator-widget-1724231127232"
+         data-type="Separator" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.54545%; margin-left: 0px;">
+      <div>
+          <div class="hr-title fullwidth-separator" style="text-align: center;"> 
+          <span class="border-color-primary"</span> 
+        </div> 
+      </div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive textWidget col12" id="text-widget-1724231127231"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.72727%; margin-left: 0px;">
+      <div class="text-widget-content"><p style="text-align: center; "><span style="color: rgba(255, 255, 255, 0.698);">Below you can find all the links&nbsp;</span><span style="color: rgba(255, 255, 255, 0.698); background-color: rgba(255, 255, 255, 0);">to find what you need.&nbsp;</span></p></div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 10%;
+                 padding-left:0%;padding-right:0%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      <div class="divider-box divider-box-bottom">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 60" aria-hidden="true">
+        <path fill="rgba(255, 255, 255, 1)" d="M1920,60H0V0S387,59,960,59,1920,0,1920,0Z"></path>
+      </svg>
+    </div></div>
+  <div 
+      
+      id="container-widget-1724231127229"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127227"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-weight: 700; font-size: 48px;">Frequency PDF download</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127226"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127225"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">Instant download</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127224"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="font-weight: 700;">Download the Frequency PDF here</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127230"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127230 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127230 .hvr-fade:focus, #button-widget-1724231127230 .hvr-fade:active, 
+            #button-widget-1724231127230 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127230 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127230 .hvr-sweep-to-right:hover, #button-widget-1724231127230 .hvr-sweep-to-right:focus, #button-widget-1724231127230 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127230 .hvr-fade:hover, #button-widget-1724231127230 .hvr-fade:focus, #button-widget-1724231127230 .hvr-fade:active, 
+            #button-widget-1724231127230 .hvr-rectangle-out:hover, #button-widget-1724231127230 .hvr-rectangle-out:focus, #button-widget-1724231127230 .hvr-rectangle-out:active,
+            #button-widget-1724231127230 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="https://content.app-sources.com/s/121499321421986301/uploads/Documents/Wave_Frequencies_and_Anecdotes-6379506.pdf" 
+             target="_blank" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      Download PDF</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      All the Frequencies you need</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1724231127223"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127221"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-size: 48px; font-weight: 700;">Wave software download</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127220"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127219"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">Instant download</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127217"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127217 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127217 .hvr-fade:focus, #button-widget-1724231127217 .hvr-fade:active, 
+            #button-widget-1724231127217 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127217 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127217 .hvr-sweep-to-right:hover, #button-widget-1724231127217 .hvr-sweep-to-right:focus, #button-widget-1724231127217 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127217 .hvr-fade:hover, #button-widget-1724231127217 .hvr-fade:focus, #button-widget-1724231127217 .hvr-fade:active, 
+            #button-widget-1724231127217 .hvr-rectangle-out:hover, #button-widget-1724231127217 .hvr-rectangle-out:focus, #button-widget-1724231127217 .hvr-rectangle-out:active,
+            #button-widget-1724231127217 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="/technical#software" 
+             target="_self" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      Software Downloads</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      Update Your Device</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1724231127216"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127214"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-weight: 700; font-size: 48px;">Treatments list</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127213"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127212"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">Browse the list</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127211"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="font-weight: 700;">See what you can treat with a Wave Resonator</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127210"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127210 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127210 .hvr-fade:focus, #button-widget-1724231127210 .hvr-fade:active, 
+            #button-widget-1724231127210 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127210 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127210 .hvr-sweep-to-right:hover, #button-widget-1724231127210 .hvr-sweep-to-right:focus, #button-widget-1724231127210 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127210 .hvr-fade:hover, #button-widget-1724231127210 .hvr-fade:focus, #button-widget-1724231127210 .hvr-fade:active, 
+            #button-widget-1724231127210 .hvr-rectangle-out:hover, #button-widget-1724231127210 .hvr-rectangle-out:focus, #button-widget-1724231127210 .hvr-rectangle-out:active,
+            #button-widget-1724231127210 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="/treatments-and-frequencies" 
+             target="_self" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      See Treatments</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      All the Treatments you can do</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1724231127209"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127207"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-size: 48px; font-weight: 700;">Technical information</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127206"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127205"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">Go to technical page</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127204"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="font-weight: 700;">Get to know all the technical information you need</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127203"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127203 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127203 .hvr-fade:focus, #button-widget-1724231127203 .hvr-fade:active, 
+            #button-widget-1724231127203 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127203 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127203 .hvr-sweep-to-right:hover, #button-widget-1724231127203 .hvr-sweep-to-right:focus, #button-widget-1724231127203 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127203 .hvr-fade:hover, #button-widget-1724231127203 .hvr-fade:focus, #button-widget-1724231127203 .hvr-fade:active, 
+            #button-widget-1724231127203 .hvr-rectangle-out:hover, #button-widget-1724231127203 .hvr-rectangle-out:focus, #button-widget-1724231127203 .hvr-rectangle-out:active,
+            #button-widget-1724231127203 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="/technical" 
+             target="_self" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      Technical Info</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      All the Tech info you need</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1724231127202"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127200"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-size: 48px; font-weight: 700;">Technical Support</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127199"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127198"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">Get the support you need</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127197"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="font-weight: 700;">Submit a technical support request for our technical team to assist you as soon as possible.</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127196"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127196 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127196 .hvr-fade:focus, #button-widget-1724231127196 .hvr-fade:active, 
+            #button-widget-1724231127196 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127196 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127196 .hvr-sweep-to-right:hover, #button-widget-1724231127196 .hvr-sweep-to-right:focus, #button-widget-1724231127196 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127196 .hvr-fade:hover, #button-widget-1724231127196 .hvr-fade:focus, #button-widget-1724231127196 .hvr-fade:active, 
+            #button-widget-1724231127196 .hvr-rectangle-out:hover, #button-widget-1724231127196 .hvr-rectangle-out:focus, #button-widget-1724231127196 .hvr-rectangle-out:active,
+            #button-widget-1724231127196 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="/technical#tech-support" 
+             target="_self" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      Submit Support Request</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      Get the support you need you need</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1724231127195"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0.650759%;
+      padding-top: 1.66305%; padding-left: 0;
+      background-color: rgba(255, 255, 255, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 73%;
+                 padding-left:0px;padding-right:0px;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget headingWidget col20" id="heading-widget-1724231127194"
+         data-type="HeadingWidget" 
+         data-delay=""
+         data-animation-duration="1100"
+         data-animation-delay="0"
+         data-animation="lazyAnimation-0"
+         style="margin-top: 1.40693%; margin-left: 0px;">
+      <div class="text-widget-content"><h1 style="text-align: left;"><span style="font-size: 48px; font-weight: 700;">Guarantee</span></h1></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1724231127193"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 4.2341220423412205% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127192"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="color: rgb(82, 167, 167); font-family: &quot;Ropa Sans&quot;; font-size: 18px;">We got you covered</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1724231127191"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="text-widget-content"><p><span style="font-weight: 700;">Read our guarantee policy.</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive buttonWidget col20" id="button-widget-1724231127190"
+         data-type="Button" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 2.84091%; margin-left: 0%;">
+      <div class="main-widget-content">
+        <style type="text/css">
+            #button-widget-1724231127190 .hvr-sweep-to-right:before, 
+             #button-widget-1724231127190 .hvr-fade:focus, #button-widget-1724231127190 .hvr-fade:active, 
+            #button-widget-1724231127190 .hvr-rectangle-out:before {
+              background: #028090 !important;
+              border-color: #028090 !important;
+            }
+
+            #button-widget-1724231127190 .hvr-fade:hover {
+              background: #028090 !important;
+            }
+
+            #button-widget-1724231127190 .hvr-sweep-to-right:hover, #button-widget-1724231127190 .hvr-sweep-to-right:focus, #button-widget-1724231127190 .hvr-sweep-to-right:active, 
+            #button-widget-1724231127190 .hvr-fade:hover, #button-widget-1724231127190 .hvr-fade:focus, #button-widget-1724231127190 .hvr-fade:active, 
+            #button-widget-1724231127190 .hvr-rectangle-out:hover, #button-widget-1724231127190 .hvr-rectangle-out:focus, #button-widget-1724231127190 .hvr-rectangle-out:active,
+            #button-widget-1724231127190 .hvr-sweep-to-right:hover .btn-text-wrapper span {
+              color: #ffffff !important;
+            }
+          </style>
+        <div style="text-align: center;">
+          <a href="/legal#warranty" 
+             target="_self" class="theme-button hvr-sweep-to-right bg-color-primary border-color-primary " 
+             style="font-size: 17px; 
+             color:#ffffff;letter-spacing:0px;border-width: 0px;
+             padding: 20px 40px;
+             width: auto;
+             box-shadow: -8px 6px 15px 0px rgba(0, 0, 0, 0.3) ;
+             border-radius: 3px;">
+
+            <div class="flex flex-col btn-text-wrapper ta-center">
+                    <span class="flex-1 ">
+                      Guarantee Policies</span>
+                    <span class="flex-1 "
+                          style="font-size: 14px;
+                          14px;color:rgba(255, 255, 255, 0.75);font-family:'Arial';">
+                      Read your policies</span>
+                  </div>
+                </a>
+        </div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column  grid-column-no-widgets   " 
+                 style="width: 27%;
+                 padding-left:2%;padding-right:2%;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  </div>
+              </div></div>
+      </div>
+  </div>
+      </div>
+  <footer class="page-footer ">
+            <div 
+      
+      id="container-widget-1518031115953"
+      
+      data-type="Container"
+      class="grid-row
+       grid-row-fullwidth stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0%;
+      padding-top: 0%; padding-left: 0;
+      background-color: rgba(245, 245, 245, 1);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column     has-bg-color" 
+                 style="width: 33%;
+                 padding-left:1%;padding-right:0px;background-color: #ffffff;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1518031115952"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 4.75113%; margin-left: 0px;">
+      <div class="text-widget-content"><h3 style="line-height: 1.2;"><span style="font-size: 36px; font-family: Tahoma;">WAVE TECHNOLOGIES</span></h3></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col19" id="text-widget-1518036927484"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 3.84615%; margin-left: 0%;">
+      <div class="text-widget-content"><p><span style="font-family: Tahoma;">Wave Technologies has been involved with the development and distribution (since 1999) of high-tech, accurate, effective, easy-to-operate resonators at very affordable prices. Thanks to the experience and expertise gained over the years we have now the reputation as the resonator manufacturer that constantly offers more value for less money, than any of our competitors.</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget
+          widgetResponsive socialMediaWidget col20"
+         data-type="SocialMediaWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 7%; margin-left: 0%;"  id="socialmedia-widget-1518031115951">
+      <style type="text/css">
+          #socialmedia-widget-1518031115951 .social-media-button i {
+          background: #262626;color: #ffffff;
+          font-size: 10px;
+          height: 10px;
+          width: 10px;
+          line-height: 10px;
+          border-radius: 0px;
+        }
+
+        #socialmedia-widget-1518031115951 .social-media-button:hover i {
+          background: #f37a34;
+        }
+      </style>
+      <div class="col20 f-left" style="text-align: left">
+        <a class="social-media-button slow-transition-bg" href="https://www.facebook.com/RifeHealth" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+            <a class="social-media-button slow-transition-bg" href="https://www.youtube.com/@waveresonatorshealthcare" target="_blank">
+                <i class="fa fa-youtube"></i>
+              </a>
+            </div>
+    </div>
+  </div>
+              </div><div class="grid-column    " 
+                 style="width: 37%;
+                 padding-left:1%;padding-right:0px;background-color: transparent;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive imageWidget col20" id="image-widget-1720691127133"
+         data-type="ImageWidget"
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 8.6%; margin-left: 0px;">
+
+      <div class="image-box  image-position-default" 
+           style="max-width: 500px;">
+        <div class="widget-preserving-ratio-outer " 
+             style="padding-bottom: 40.0%" >
+
+          <div class="widget-preserving-ratio-inner" data-slide="https://content.app-sources.com/s/121499321421986301/uploads/Documents/Logo_25_years-removebg-preview-0697087.png?format=webp">
+            <a class="lazyImage flex flex-col
+                image-fit"
+               
+               >
+              <img src="https://content.app-sources.com/s/121499321421986301/uploads/Documents/Logo_25_years-removebg-preview-0697087.png?format=webp" class="flex-none" alt="" style=""  />
+            </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1713769063975"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 10.4%; margin-left: 0%;">
+      <div class="text-widget-content"><h4 style="text-align: left;"><span style="font-family: &quot;Open Sans&quot;;"><span style="color: rgb(90, 196, 203);"></span>NEWSLETTER</span></h4></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1713769063972"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 5%; margin-left: 0%;">
+      <div class="text-widget-content"><div style="text-align: left;"><span style="color: rgb(106, 106, 106); font-size: 15px; background-color: rgba(255, 255, 255, 0);">Sign up for our email to get the latest news</span></div></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget form-widget-style-1 
+          formWidget col19 widgetResponsive" id="form-widget-1713769063968"
+         data-type="FormWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 5.24412%; margin-left: 0px;">
+      <div data-role="form" class="widget-form widget-form-dark form-left subscribeWidget-fields-count-2"
+           data-on-submit="message" 
+           data-on-submit-page="" 
+           data-pass-values="false">
+        <div class="widget-form-inner-wrapper">
+          <input type="hidden" class="none" name="formid" value="2vwn1AOA3kmrXJ7/ywN6UabOW3Csph8SxgSSOhWuUs0LJOocTLNn9ZqLbRwO2c+5IWV8sYipxVUMsuMSwOj9wl1EpYDwx9IeCmCUOW+MTa1Gb6xTVxAwagHT9TF/FPYyh3Y4mE/SgBM2YU3dNplIKuHQYtV0DoA40c6earnyQDmQ9mGrBWDkY93WQc7J5cHuQSjbSxIVmZd4w5fvUQba84d8CyNcyIKvrpRPQF625+o+z7tWeyjUUMosbgFYYljgiX9DZg2bezRQQVE7noeFcGdZgyu9pePJp2Unyw78iHMHwQsZf0MtjCwYSxyGT65x9kzajgOiry3pZIf8OyW0vgfLVNhMcxfLEWiIhW877k0fQaVO8CZ730jv8AgwUxff4W6YOSSRXo/CzpGf6wpIZ9BxlSNMiVd/Q+b/XZInw019ce86Sd77UwlY6lA+5yFqLEKG7sLOLOAYeUn7fjB6uVnp4zyroY7mURYbp2UbFNi3D4af6K+J3S9Tcj3i3phhQdDZ3Pimq6vfflbcZktTOqQYRcVFcUy+g/j98vOCwodcN6mms2sfs8j99/7bCbKZRbMeXgALLjyD22vGOdnPz3ZAGr2f+2tVilt5MJ912650E7CPgJgNhtaIDPvbc+j6Jff75sqs84k77MshL9eNZ+fAaKJMSUS9KASPQPRM+GJrVBbdhvyXALVw1f9qjkagAu736My9waq0G2k2dMZcsE/v72aHdiTQWn588PQTOFwI5484a7r0XOlbgeK7BrRq792nahu/l1tRz4DLz01fFNOIHFAwrwdc6tpLFfQaW4EABzj4sKGCmdd6cfraOuvyVEPbA7s6k1cWLB4zn4DgY/giYMQkfRa5FBoLpJLETxV/E2iDUs+l81JgY3bUvypHXDiOe74PdLGGV70oxiYk/Wd0SMj6X9znoHWukV7y2SSedLNNbT+vB7+DHpry7EadWp0t1dTfXfHk64heUDXVTgL2+uCeoqTPpYB4BOXnSgXeAOdRQLFnc0YiO/ksIs7xthMqujhkVNNLdEMCgrQu/mDlIZQwuQ6QKVV+Lzo7rCwIzcGXjzUdb60hhuG3njYpEpv6KryC2rkfT4ISBt608rSS9G6ocLPpajemy+Q/I27H+MvVXMyCH+gLQ+REKXn9hjKO29DXA9wUyCJhZip+ReM6VIuI6ueEmDo2l2O+RcOqTE1bPXRCC6GQuob5Mnbfw5ZHdlXkVPQrukjz6iSp1A5LbrOPGJxlDSaDgcE8JNJjCYfo8AcZkICnSfeIWgKhpv/+/p40zZx+iQPwMAepCmGSgE5JAo5bNDf0xEweRWVD8Cp3nnsB8/WjLhGDFiuJFkYx23Eq0fWuffQSj+UPJ1pnBjC4nYJIB1/5phpXfkMD41dSZ/uIJNRtd7qkG1CRQcGPXvg0IJIZMDYF6eWiHYuoPxtKQntvJsgFkbN8mQqtryM1qcqTk6AnnIWSBICe4u89DMBpFdD3i0aMA+Cs4+vyoNoBBXutwg11rb/yvtx4uT3XfGS+ExL4tKoCp3c4lw0RM1EyGxoi4Vyhm87KMyl1ObS9YZNrL9JJFD17g37FzOXlaH0ZBc9zumlhLsbGxPDQXa42dgypPMj1eUJjBnpjxlBIWQZSeHyqf5W4eP6R3dZpFz+0UAA0wm9Gb4j0jW4jhNDRRKYYrRlmuACUHQaXUrf+W8Ddck4jjz8vahJnfWm7k8aovd8NrlUKazqzYTofOuy5+1gMnHwe+1uzA5/QJ6pHG/EXOOWgOjjHgmbyiAXcWpXSrWj3z0fHNXnJ1lrOxwkZcQ95hfWEhyqPTyM0os5094UkdAIZXNU1ONe/2m0sZ+xMsBQKsuTflp6JSqBeS5znr1DEx//aTVsRB2sBLebWcnmyePFsPBjjvBFlJOEN1opBcIn7JTB6RPgGjYzXm8aHIpDs7QJzAfOaPl9Geh/c+1a7tutRM3UufnUdSe/xCU0q8RJdsCnwb/H23lSeClR6ljaPbUBedp5Uy/RP9b1ZJYdYXXLG0M4pd3Ptb3qY8d3VHTnLt6bQ3Qed0ZQl243U7v1PiZE2WY5yfhOuAjiAUKTk1iXozFSaCilfxrwU+bHiDSiWvpo7iP4+sf5GL0Bw9wN1x9jdzSoCRXsjcq0z5lmHA1u6QeIfgu0D8l9ixlhspQwksUKiRuqt/tyF+Y96bicUfp5mq9w+ELtoGY1fg/z8n/UO9+woHvhqsDXP++88RLRqEgk0M/GZXzMddXSlLh46GRnTwv/wPgrSXcWbTbPrRgzmHus7v/H2imJQm2ywXEvT3IBEY3I2C/oaZhe2UNaD1tRzZcBUcv9XewC8Iy2lL6IAw5C2ZcIfuaf/FxmVWQ9EQi2+H9GtZQOki4mQWfsMBe8msHmdmsN4/CutXk+q7P5bfQoJAvcpmIzAitI+vpW+15Gm/9EjLVGU6WwTeCCZLxEuaQEeVNZYVb9bvVpxkOjX0SeAY7QLEZTDXuJceJ9cPHsva5rdRSRtVQNRp6jBqF7jALuhjg7Pm8JE3tKU6aa3ElZnyFCoSiWSs2xQ0I2jsm0Xp0EWPQRzio1o1OTI4+bktPSHD17v092oQYhiwuJw17jVkjsnwjnOgvK+sXuHjQUj35VyKhpk9tzuuTmh46AEtZumnuQq5Hf13jRqCpMUabplUhpbZCxHDKuMMbLU66H/p54DWCFzCrV4QLVPl04gYEp/YVzH1qQEKPIz2577o0mrkvVbpqvBFeMv6Tv0MXAbm1E4XzMm1dr5S7rPXvvN2t8Cq+O9OKLP7HSJT/l94qpdInMAkhry1I8RMj/vS3mRpnEH/tYQb2kNtlIgzjJuxTqG/2zPiwqbxbr+sSw3Q41+OqDpCVxYs0Za7bl6vFKKszARMMk45V4PPa2w72ltuFAMV7buKsfa06jKeaFS8T/ML6GbKvjvQNzGjYj5S1wotoTEYdVXY8kROt4Cvit1LWyzEmtJVaKa162B3ZsDWAMLHyhDONfY7Q32EPHIkyuA5I24e+tWfxFMGDNZ4qNp6BCGTP5FNoyoPPyg0gdZKx9wDrrLWbHmG+rFte8MUVNmQiZj" />
+          <div class="form-field " data-type="text">
+  <span class="title  " style="
+                 color:#444444;
+                 font-size:14px;
+                 font-family:Open Sans;">
+      Name</span>
+    <span class="field-error">Required field!</span>
+    <input class=" 
+                  
+                  " style="
+                 color:#666666;
+                 font-family:Open Sans;
+                 border-radius: 0px;
+                 background-color: #ffffff;
+                 border-color: #e1e1e1;" data-name="Name"
+               aria-label="Name" type="text" data-type="text" name="field0" placeholder="">
+      </div>
+<div class="form-field " data-type="text">
+  <span class="title  " style="
+                 color:#444444;
+                 font-size:14px;
+                 font-family:Open Sans;">
+      Email</span>
+    <span class="field-error">Required field!</span>
+    <input class=" 
+                  
+                  " style="
+                 color:#666666;
+                 font-family:Open Sans;
+                 border-radius: 0px;
+                 background-color: #ffffff;
+                 border-color: #e1e1e1;" data-name="Email"
+               aria-label="Email" type="text" data-type="email" name="field1" placeholder="">
+      </div>
+<div class="widget-form-button-wrapper" style="text-align: center">
+            <a data-role="submit" class="theme-button no-hover   "
+               style="
+               font-size: 14px;background-color: rgba(90, 196, 203, 1);border-color: rgba(90, 196, 203, 1);color:#ffffff;font-family:'Open Sans';letter-spacing:0px;border-width: 0px;
+               padding: 22px 44px;
+               width: 100%;
+               
+               border-radius: 0px;">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          
+         widgetResponsive spacer col20" id="spacer-widget-1716297453590"
+         data-type="Spacer" 
+         style="margin-top: 0px; margin-left: 0px;">
+      <div class="widget-preserving-ratio-outer" style="padding-bottom: 6.0% ">
+        <div class="widget-preserving-ratio-inner"></div>
+      </div>
+    </div>
+  </div>
+              </div><div class="grid-column     has-bg-color" 
+                 style="width: 30%;
+                 padding-left:3%;padding-right:0px;background-color: rgba(255, 255, 255, 1);
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1518031115950"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 10.7239%; margin-left: 0%;">
+      <div class="text-widget-content"><p><span style="font-size: 18px; color: rgb(90, 196, 203); font-family: &quot;Open Sans&quot;;">INFORMATION</span></p></div>
+    </div>
+  </div>
+              <div class="widget-row ">
+                  <div class="widget 
+          widgetResponsive textWidget col16" id="text-widget-1518031115949"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 4%; margin-left: 0%;">
+      <div class="text-widget-content"><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/home">Home</a></span></p><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/store">Store</a></span></p><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/about-us">About Us</a></span></p><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/pdf-downloads">PDF Downloads</a></span></p><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/blog">Blog</a></span></p><p style="line-height: 2;"><span style="color: rgb(106, 106, 106); font-size: 15px;"><a href="/contact-us">Contact Us</a></span></p></div>
+    </div>
+  </div>
+              </div></div>
+      </div>
+  <div 
+      
+      id="container-widget-1518031115941"
+      
+      data-type="Container"
+      class="grid-row
+       stretched-mobile stretched-tablet"
+      data-delay=""
+      style="padding-bottom:0%;
+      padding-top: 0%; padding-left: 0;
+      background-color: rgba(32, 32, 32, 1);
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto;
+      
+      background-image: none;">
+      <div class="grid-content ">
+          <div class="grid-column    " 
+                 style="width: 100%;
+                 padding-left:0px;padding-right:0px;background-color: transparent;
+                 background-image: none;
+                 
+                   background-size: cover;
+                   background-repeat: no-repeat;
+                   background-position: center center;
+                 
+                 top: 0px;
+                 
+                 ">
+
+              <div class="widget-row with-centered-content">
+                  <div class="widget 
+          widgetResponsive textWidget col20" id="text-widget-1518031115940"
+         data-type="TextWidget" 
+         data-delay=""
+         data-animation-duration=""
+         data-animation-delay=""
+         data-animation="lazyAnimation-"
+         style="margin-top: 0%; margin-left: 0px;">
+      <div class="text-widget-content"><p style="text-align: center;"><span style="color: rgb(255, 255, 255); font-size: 14px;">©2025. Rife Health. All Rights Reserved</span></p></div>
+    </div>
+  </div>
+              </div></div>
+      </div>
+  </footer>
+        </div>
+
+      <!-- Quick Cart -->
+        <div class="cart-preview cart-preview-popup cart-preview-full-height" data-role="cart-box">
+          <div class="loader"></div>
+          <div class="cart-empty-wrapper none">
+            <span class="cart-preview-title">Your cart is empty</span>
+            <a href="/store" class="primaryColor-bg2 continue-shopping-btn">Continue</a>
+          </div>
+          <div class="cart-preview-wrapper">
+            <div class="cart-items-wrapper col20 f-left none">
+              <span class="cart-preview-title">Shopping Cart</span>
+              <div class="cart-container">
+                <div class="cart-labels">
+                </div>
+                <div class="col20 f-left cart-table"></div>
+                <div class="subtotal-wrapper">
+                  <span class="subtotal-price subtotal-value"></span>
+                  <span class="subtotal">Subtotal:</span>
+                </div>
+                <div class="subtotal-wrapper product-discount-wrapper none-soft">
+                  <span class="subtotal-price force-right"></span>
+                  <span class="subtotal force-right">
+                    <a class="remove-discount-btn"><i class="fa fa-trash-o"></i></a>
+                    Discount&nbsp;<span></span>
+                  </span>
+                </div>
+                <div class="subtotal-wrapper shipping-discount-wrapper none-soft">
+                  <span class="subtotal-price force-right"></span>
+                  <span class="subtotal force-right">
+                    <a class="remove-discount-btn"><i class="fa fa-trash-o"></i></a>
+                    Discount&nbsp;<span></span>
+                  </span>
+                </div>
+                <div class="checkout-buttons">
+                      <a href="/store/cart" class="checkout-btn btn view-cart-btn">View Cart</a>
+                      <a href="/store/checkout" value="Checkout" class="primaryColor-bg2 checkout-btn">Checkout</a>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-preview-overlay none"></div> 
+      </div>
+
+    <div class="popup-wrapper at-center none" id="analyticsSettings">
+        <div class="popup-overlay" style="background: rgba(0, 0, 0, 0.7);">
+        </div>
+        <div class="wrapping-table">
+          <div class="popup-container cookies-popup">
+            <a class="close-btn"></a>
+            <span class="f-left col20 cookies-popup-title">Visitor Information Reporting</span>
+            <input id="analyticsTracking" class="css-label modify" type="checkbox" name="analyticsTracking" />
+            <label for="analyticsTracking" class="css-label2 button-tooltip">Allow this website to collect visitor and device info for statistical purposes.</label>
+            <div class="f-left col20"><button class="save-changes at-middle">Save Changes</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick View -->
+      <div class="quick-view-overlay">
+        <div class="quick-view-wrapper">
+          <a data-role="close" class="close-btn"></a>
+          <div class="quick-view-inner-wrapper custom-scroll">
+            <div class="product-photo-container custom-scroll" data-role="images" data-trigger=".product-main-photo" data-manual-trigger="true"></div>
+            <div class="product-body-container custom-scroll">
+              <span class="quick-view-title"><a data-role="title" data-add="url"></a></span>
+                <div class="product-price">
+                <span class="current-price" data-role="currentPrice"></span>
+                <span class="old-price" data-role="oldPrice"></span>
+                <span data-role="subPeriod" style="font-size: 16px"></span>
+              </div>
+              <a class="view-details-btn" data-add="url">View Details</a>
+              
+              <div class="product-variations" data-role="variations"></div>
+              <div class="addtocart-wrapper">
+                <div class="qty-wrapper">
+                  <label>Quantity</label>
+                  <div class="number-selector f-left flex align-center">
+                    <a class="number-pad flex-none" data-role="-1">-</a>
+                    <input class="quantity no-spin" name="orderQuantity" type="number" size="4" value="1" step="1" max="9999" min="1" aria-label="Quantity" />
+                    <a class="number-pad flex-none" data-role="1">+</a>
+                  </div>
+                </div>
+                <div class="add-to-wrapper">
+                  <a data-role="addToCart" data-process="cart" class="primaryColor-bg2 add-to-cart"></a>
+                  <div class="sold-out-btn none" data-role="soldOut">Sold Out</div>
+                </div>
+              </div>
+              <div class="col20 f-left product-description none" data-role="simple-desc"></div>
+              <div class="product-description none"></div>
+            </div>
+          </div>
+        </div>
+      </div>  
+
+      
+
+
+
+
+
+<script type="text/javascript">
+  window.WebPlatform = window.WebPlatform || {};
+  WebPlatform.Phrases = (WebPlatform.merge || window.mergeUnique)({
+    'ERR_INVALID_REQUEST': 'Invalid request!',
+    'label.invalid_request': "Invalid request!",
+    'client.by': "by",
+    'client.on': "on",
+    'client.in': "in",
+    'label.of': "of",
+    'client.comment': "Comment",
+    'client.comments': "Comments",
+    'client.read_more': "Read More",
+    'client.load_more': "Load More",
+    'label.view': "View",
+    'label.years': "Years",
+    'label.months': "Months",
+    'label.days': "Days",
+    'label.minutes': "Minutes",
+    'label.hours': "Hours",
+    'label.seconds': "Seconds",
+    'card.number': "Card Number",
+    'card.cvc': "CVC",
+    'card.mm': "MM",
+    'card.yyyy': "YYYY",
+    'card.invalid_data': "Please verify your credit/debit card details and try again.",
+    'card.invalid_number': "The card number is not a valid credit or debit card number.",
+    'card.invalid_month': "Your card's expiration month is invalid.",
+    'card.invalid_year': "Your card's expiration year is invalid.",
+    'card.invalid_cvc': "Your card's security code is invalid.",
+    'card.unknown_error': "Please verify your payment details and try again.",
+    'label.shipping_address': "Shipping Address",
+    'label.billing_address': "Billing Address",
+    'label.january': "January",
+    'label.february': "February",
+    'label.march': "March",
+    'label.april': "April",
+    'label.may': "May",
+    'label.june': "June",
+    'label.july': "July",
+    'label.august': "August",
+    'label.september': "September",
+    'label.october': "October",
+    'label.november': "November",
+    'label.december': "December",
+    'label.jan': "Jan",
+    'label.feb': "Feb",
+    'label.mar': "Mar",
+    'label.apr': "Apr",
+    'label.may_short': "May",
+    'label.jun': "Jun",
+    'label.jul': "Jul",
+    'label.aug': "Aug",
+    'label.sep': "Sep",
+    'label.oct': "Oct",
+    'label.nov': "Nov",
+    'label.dec': "Dec",
+    'label.add_to_cart': "Add To Cart",
+    'label.buy_now': "Buy Now",
+    'label.update': "Update",
+    'label.change': "Change",
+    'label.month': "month",
+    'label.year': "year",
+    'label.months_lower': "months",
+    'label.years_lower': "years",
+    'label.week_lower': "week",
+    'label.weeks_lower': "weeks",
+    'label.saving': "Saving",
+    'label.checkout_now': "Checkout Now",
+    'label.view_cart': "View Cart",
+    'label.select_product_variant': "Select variant",
+    'err.select_product_variants': "Select variation for each item in your order",
+    'label.cod': "Pay on delivery",
+    'label.bank': "Bank Transfer",
+    'label.yes': "YES",
+    'label.no': "NO",
+    'label.enter_delivery_address': "Please enter your shipping details",
+    'label.no_delivery_offices': "No offices available",
+    'label.select_speedy_office': "Select Speedy office",
+    'label.no_shipping_services': "Please enter address",
+    'label.select_delivery_type': "Select delivery type",
+    'label.monday_min': "Mo",
+    'label.tuesday_min': "Tu",
+    'label.wednesday_min': "We",
+    'label.thursday_min': "Th",
+    'label.friday_min': "Fr",
+    'label.saturday_min': "Sa",
+    'label.sunday_min': "Su",
+    'label.monday_short': "Mon",
+    'label.tuesday_short': "Tue",
+    'label.wednesday_short': "Wed",
+    'label.thursday_short': "Thu",
+    'label.friday_short': "Fri",
+    'label.saturday_short': "Sat",
+    'label.sunday_short': "Sun",
+    'label.contact_booked_error': "You already booked a spot in this group event",
+    'label.already_booked_time_error': "The selected time is not available, please select a different time",
+    'label.booking_notice_error': "Booking is too close to the current time, please reload the page",
+    'label.delete_account_prompt': "Do you want to delete your account?",
+    'label.slots_left': "slots left",
+    'store.label.sale': "Sale",
+    'label.left_in_stock_multiple': "Only %x% left in stock!",
+    'label.left_in_stock_single': "Only 1 left in stock!",
+    'label.taxes': "Tax:",
+    'label.taxes_included': "Tax Included:",
+    'error.fill_required_fields': "Please fill all the required fields!",
+    'label.logout': "Log Out",
+    'label.subscriptions': "Subscriptions",
+    'label.my_membership': "My Membership",
+    'label.downloads': "Downloads",
+    'label.order_history': "Order History",
+    'label.details': "Details",
+    'label.address': "Address",
+    'label.information': "Information",
+    'label.name': "Name",
+    'label.email': "Email Address",
+    'label.password': "Password",
+    'label.old_password': "Current password",
+    'label.new_password': "New password",
+    'label.repeat_password': "Repeat password",
+    'members.button.delete_account': "Delete Profile",
+    'members.button.save_changes': "Save Changes",
+    'label.saved': "Saved!",
+    'label.phone': "Phone Number",
+    'label.optional': "optional",
+    'label.store.address': "Address",
+    'label.store.address2': "Additional Address Information",
+    'label.store.city': "City",
+    'label.store.state': "State",
+    'label.store.post_code': "Postal/ZIP Code",
+    'label.store.companyId': "Company Identification Number",
+    'label.store.companyName': "Company Name",
+    'label.store.use_different_billing_addr': "Use different billing address",
+    'label.download': "Download",
+    'label.my_subscriptions': "My Subscriptions",
+    'label.product': "Product",
+    'label.subscription_fee': "Subscription Fee",
+    'label.last_billing_date': "Last Billing Date",
+    'label.next_billing_date': "Next Billing Date",
+    'label.order_status_canceled': "Canceled",
+    'label.order_status_completed': "Completed",
+    'label.cancel_subscription': "Cancel Subscription",
+    'label.view_membership': "view membership details",
+    'label.cancel_subscription_desc': "Are you sure you want to cancel your subscription?",
+    'label.invoice_no': "Invoice No",
+    'label.date': "Date",
+    'label.store.total': "Total",
+    'label.status': "Status",
+    'label.no_orders_yet': "You don't have any orders yet!",
+    'label.status_pending': "Pending",
+    'label.status_shipped': "Shipped",
+    'label.status_completed': "Completed",
+    'label.status_canceled': "Canceled",
+    'label.shipping_details': "Shipping Details",
+    'label.billing_details': "Billing Details",
+    'label.payment_details': "Payment Details",
+    'label.card': "Credit Card",
+    'label.shipping_cost': "Shipping Cost",
+    'label.additional_info': "Additional info",
+    'label.discount': "Discount",
+    'label.quantity': "Quantity",
+    'label.price': "Price",
+    'store.label.subtotal': "Subtotal",
+    'label.store.discount_title': "Discount",
+    'label.variation': "Variation",
+    'label.profile': "My Profile",
+    'label.order_id': "Order #",
+    'label.speedy.to_address_short': "Delivery to address",
+    'label.speedy.to_office_short': "Speedy office",
+    'label.minutes_short': "min"
+              
+  }, WebPlatform.Phrases || {});
+</script><script type="text/javascript">
+          WebPlatform.Store = WebPlatform.Store || {};
+        
+          WebPlatform.merge(WebPlatform.Store, {
+            hideUnavailableVariations: false,
+            notEnoughQuantityMessage: "Not enough available quantity for some of the products!",
+            currencySymbol: "$",
+            currencySymbolAtLeft: true,
+            currency: 'USD',
+            priceWithTax: true,
+            country: 'ZA',
+            baseUrl: '/store',
+            productAddedToCart: 'Product was added to your cart',
+            fbPxId: '1488614158471435'
+          });
+        
+
+              WebPlatform.clientData = null;
+              WebPlatform.visitorEmail = ''; 
+              WebPlatform.visitorName = ''; </script>
+
+      <script type="text/javascript" src="https://static.web-repository.com/scripts/platform.client.min.js?v=1038" data-cookieconsent="ignore"></script>
+        
+
+
+
+
+
+
+
+
+
+<script src="https://app.aminos.ai/js/chat_plugin.js" data-bot-id="21940"></script><!-- /><div></div> */</script> /**/ <!-- -->
+      <script type="text/javascript" src="https://static.web-repository.com/scripts/common/hit.js?v=1038"></script>
+    </body>
+  </html>
