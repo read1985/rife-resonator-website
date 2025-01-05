@@ -114,8 +114,15 @@ class Checkout {
 
             // Only redirect if cart is empty AND we've confirmed the cart is properly loaded
             if (cartData.items.length === 0) {
-                console.log('Cart is empty, redirecting to shop...');
-                window.location.href = 'shop.html';
+                console.log('Cart is empty, will redirect to shop in 3 seconds...');
+                console.log('Set localStorage.debug = true to prevent redirect');
+                
+                // Check if we're in debug mode
+                if (!localStorage.getItem('debug')) {
+                    setTimeout(() => {
+                        window.location.href = 'shop.html';
+                    }, 3000);
+                }
                 return;
             }
 
