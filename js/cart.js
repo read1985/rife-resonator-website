@@ -169,31 +169,35 @@ class Cart {
     }
 
     toggleCart() {
+        console.log('Toggling cart');
         if (this.cartSidebar) {
-            this.cartSidebar.classList.toggle('active');
-            // Toggle overlay
-            let overlay = document.querySelector('.cart-overlay');
-            if (!overlay) {
-                overlay = document.createElement('div');
-                overlay.className = 'cart-overlay';
-                document.body.appendChild(overlay);
-                overlay.addEventListener('click', () => this.closeCart());
+            const isActive = this.cartSidebar.classList.contains('active');
+            console.log('Cart is currently:', isActive ? 'active' : 'inactive');
+            
+            if (isActive) {
+                this.closeCart();
+            } else {
+                this.openCart();
             }
-            overlay.classList.toggle('active');
+        } else {
+            console.error('Cart sidebar not found');
         }
     }
 
     closeCart() {
+        console.log('Closing cart');
         if (this.cartSidebar) {
             this.cartSidebar.classList.remove('active');
             const overlay = document.querySelector('.cart-overlay');
             if (overlay) {
                 overlay.classList.remove('active');
+                setTimeout(() => overlay.remove(), 300); // Remove after transition
             }
         }
     }
 
     openCart() {
+        console.log('Opening cart');
         if (this.cartSidebar) {
             this.cartSidebar.classList.add('active');
             let overlay = document.querySelector('.cart-overlay');
@@ -203,6 +207,8 @@ class Cart {
                 document.body.appendChild(overlay);
                 overlay.addEventListener('click', () => this.closeCart());
             }
+            // Force a reflow before adding active class
+            overlay.offsetHeight;
             overlay.classList.add('active');
         }
     }

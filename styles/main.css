@@ -589,14 +589,14 @@ footer {
     background: #fff;
     box-shadow: -2px 0 5px rgba(0,0,0,0.1);
     z-index: 9999;
-    transition: transform 0.3s ease-in-out;
+    transition: right 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
 }
 
 .cart-sidebar.active {
-    transform: translateX(-400px);
+    right: 0;
 }
 
 .cart-header {
