@@ -10,8 +10,7 @@ class Cart {
         console.log('Creating new cart instance');
         this.items = [];
         this.total = 0;
-        this.shipping = 0;
-        this.tax = 0;
+        this.shipping = 50;
         this.initialized = false;
         
         cartInstance = this;
@@ -346,24 +345,34 @@ class Cart {
         // Subtotal
         this.total = this.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         if (this.cartSubtotal) {
-            this.cartSubtotal.textContent = `$${this.total.toFixed(2)}`;
+            this.cartSubtotal.innerHTML = `
+                <div class="total-line">
+                    <span>Subtotal:</span>
+                    <span>$${this.total.toFixed(2)}</span>
+                </div>
+            `;
         }
 
-        // Shipping (free over $500)
-        this.shipping = this.total >= 500 ? 0 : 29.95;
+        // Flat shipping fee of $50
+        this.shipping = 50;
         if (this.cartShipping) {
-            this.cartShipping.textContent = `$${this.shipping.toFixed(2)}`;
+            this.cartShipping.innerHTML = `
+                <div class="total-line">
+                    <span>Shipping:</span>
+                    <span>$${this.shipping.toFixed(2)}</span>
+                </div>
+            `;
         }
 
-        // Tax (8.25%)
-        this.tax = this.total * 0.0825;
-        if (this.cartTax) {
-            this.cartTax.textContent = `$${this.tax.toFixed(2)}`;
-        }
-
-        // Total
+        // Total (no tax)
+        const finalTotal = this.total + this.shipping;
         if (this.cartTotal) {
-            this.cartTotal.textContent = `$${(this.total + this.shipping + this.tax).toFixed(2)}`;
+            this.cartTotal.innerHTML = `
+                <div class="total-line grand-total">
+                    <span>Total:</span>
+                    <span>$${finalTotal.toFixed(2)}</span>
+                </div>
+            `;
         }
     }
 
@@ -371,15 +380,13 @@ class Cart {
         console.log('Saving cart data:', {
             items: this.items,
             total: this.total,
-            shipping: this.shipping,
-            tax: this.tax
+            shipping: this.shipping
         });
         
         localStorage.setItem('cart', JSON.stringify({
             items: this.items,
             total: this.total,
-            shipping: this.shipping,
-            tax: this.tax
+            shipping: this.shipping
         }));
     }
 
@@ -392,24 +399,21 @@ class Cart {
                 const cart = JSON.parse(savedCart);
                 this.items = cart.items || [];
                 this.total = cart.total || 0;
-                this.shipping = cart.shipping || 0;
-                this.tax = cart.tax || 0;
+                this.shipping = 50; // Always set to flat rate
                 console.log('Cart data loaded successfully:', this.items);
                 this.updateCart();
             } catch (error) {
                 console.error('Error loading cart data:', error);
                 this.items = [];
                 this.total = 0;
-                this.shipping = 0;
-                this.tax = 0;
+                this.shipping = 50;
                 this.updateCart();
             }
         } else {
             console.log('No saved cart data found');
             this.items = [];
             this.total = 0;
-            this.shipping = 0;
-            this.tax = 0;
+            this.shipping = 50;
             this.updateCart();
         }
     }
@@ -417,8 +421,7 @@ class Cart {
     clearCart() {
         this.items = [];
         this.total = 0;
-        this.shipping = 0;
-        this.tax = 0;
+        this.shipping = 50;
         localStorage.removeItem('cart');
         this.updateCart();
         console.log('Cart cleared');
@@ -429,16 +432,14 @@ class Cart {
             items: this.items,
             subtotal: this.total,
             shipping: this.shipping,
-            tax: this.tax,
-            total: this.total + this.shipping + this.tax
+            total: this.total + this.shipping
         });
         
         return {
             items: this.items,
             subtotal: this.total,
             shipping: this.shipping,
-            tax: this.tax,
-            total: this.total + this.shipping + this.tax
+            total: this.total + this.shipping
         };
     }
 

@@ -633,12 +633,22 @@ footer {
     background: #fff;
 }
 
-.cart-total {
+.total-line {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.total-line.grand-total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #eee;
     font-size: 18px;
     font-weight: bold;
+    color: #333;
 }
 
 .checkout-button {
@@ -651,10 +661,16 @@ footer {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin-top: 15px;
 }
 
 .checkout-button:hover {
     background: #4ab3ba;
+}
+
+.checkout-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
 }
 
 .copyright-bar .container {
