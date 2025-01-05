@@ -116,8 +116,8 @@ class Cart {
     bindEvents() {
         console.log('Binding cart events');
         
-        // Cart toggle
-        this.cartToggle = document.querySelector('.cart-link');
+        // Cart toggle - handle both types of cart toggle buttons
+        this.cartToggle = document.querySelector('.cart-link, .cart-toggle');
         if (this.cartToggle) {
             console.log('Setting up cart toggle');
             this.cartToggle.addEventListener('click', (e) => {
@@ -160,12 +160,12 @@ class Cart {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Add to cart clicked');
-                const productCard = e.target.closest('.product-card');
+                const productCard = e.target.closest('.product-card, .product-details');
                 if (productCard) {
-                    console.log('Found product card:', productCard);
+                    console.log('Found product container:', productCard);
                     this.addToCart(productCard);
                 } else {
-                    console.error('No product card found');
+                    console.error('No product container found');
                 }
             });
         });
@@ -177,12 +177,12 @@ class Cart {
                 e.preventDefault();
                 e.stopPropagation();
                 console.log('Add to cart clicked (delegated)');
-                const productCard = e.target.closest('.product-card');
+                const productCard = e.target.closest('.product-card, .product-details');
                 if (productCard) {
-                    console.log('Found product card:', productCard);
+                    console.log('Found product container:', productCard);
                     this.addToCart(productCard);
                 } else {
-                    console.error('No product card found');
+                    console.error('No product container found');
                 }
             }
         });
