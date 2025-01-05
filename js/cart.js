@@ -49,7 +49,6 @@ class Cart {
                 this.cartItems = document.querySelector('.cart-items');
                 this.cartSubtotal = document.querySelector('.cart-subtotal');
                 this.cartShipping = document.querySelector('.cart-shipping');
-                this.cartTax = document.querySelector('.cart-tax');
                 this.cartTotal = document.querySelector('.cart-total');
                 this.checkoutButton = document.querySelector('.cart-sidebar .checkout-button');
                 
@@ -63,7 +62,6 @@ class Cart {
                     cartItems: !this.cartItems,
                     cartSubtotal: !this.cartSubtotal,
                     cartShipping: !this.cartShipping,
-                    cartTax: !this.cartTax,
                     cartTotal: !this.cartTotal,
                     checkoutButton: !this.checkoutButton
                 };
