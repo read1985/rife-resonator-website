@@ -33,7 +33,13 @@ class Checkout {
                     submitButton: document.querySelector('.checkout-button')
                 };
 
-                console.log('Checking elements:', elements);
+                // Log which elements are missing
+                const missingElements = Object.entries(elements)
+                    .filter(([key, value]) => !value)
+                    .map(([key]) => key);
+                
+                console.log('Attempt', this.cartLoadAttempts + 1, 'of', this.maxCartLoadAttempts);
+                console.log('Missing elements:', missingElements);
 
                 if (Object.values(elements).every(element => element)) {
                     console.log('All elements found');
@@ -41,11 +47,19 @@ class Checkout {
                     resolve();
                 } else {
                     if (this.cartLoadAttempts >= this.maxCartLoadAttempts) {
+                        console.error('Failed to find elements:', missingElements);
+                        // Don't redirect immediately if in debug mode
+                        if (!localStorage.getItem('debug')) {
+                            console.log('Will redirect to shop in 5 seconds...');
+                            setTimeout(() => {
+                                window.location.href = 'shop.html';
+                            }, 5000);
+                        }
                         reject(new Error('Checkout initialization timed out'));
                         return;
                     }
                     this.cartLoadAttempts++;
-                    setTimeout(checkElements, 500);
+                    setTimeout(checkElements, 1000); // Increased delay between attempts
                 }
             };
 
@@ -97,7 +111,7 @@ class Checkout {
                 if (this.cartLoadAttempts < this.maxCartLoadAttempts) {
                     console.log('Cart not ready, retrying...', this.cartLoadAttempts);
                     this.cartLoadAttempts++;
-                    setTimeout(() => this.loadCartSummary(), 500);
+                    setTimeout(() => this.loadCartSummary(), 1000); // Increased delay
                     return;
                 } else {
                     throw new Error('Cart failed to initialize');
@@ -114,14 +128,14 @@ class Checkout {
 
             // Only redirect if cart is empty AND we've confirmed the cart is properly loaded
             if (cartData.items.length === 0) {
-                console.log('Cart is empty, will redirect to shop in 3 seconds...');
+                console.log('Cart is empty, will redirect to shop in 5 seconds...');
                 console.log('Set localStorage.debug = true to prevent redirect');
                 
                 // Check if we're in debug mode
                 if (!localStorage.getItem('debug')) {
                     setTimeout(() => {
                         window.location.href = 'shop.html';
-                    }, 3000);
+                    }, 5000);
                 }
                 return;
             }
