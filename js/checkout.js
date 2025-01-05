@@ -83,8 +83,17 @@ class Checkout {
     }
 
     loadCartSummary() {
+        console.log('Starting loadCartSummary...');
         try {
+            // Check localStorage directly
+            const savedCart = localStorage.getItem('cart');
+            console.log('Raw cart data from localStorage:', savedCart);
+
             if (!window.cartInstance || !window.cartInstance.getCartData) {
+                console.log('Cart instance status:', {
+                    windowCartInstance: window.cartInstance,
+                    hasGetDataMethod: window.cartInstance?.getCartData
+                });
                 if (this.cartLoadAttempts < this.maxCartLoadAttempts) {
                     console.log('Cart not ready, retrying...', this.cartLoadAttempts);
                     this.cartLoadAttempts++;
@@ -96,7 +105,7 @@ class Checkout {
             }
 
             const cartData = window.cartInstance.getCartData();
-            console.log('Cart data loaded:', cartData);
+            console.log('Cart data from getCartData:', cartData);
 
             if (!cartData || !cartData.items) {
                 console.error('Invalid cart data structure:', cartData);
@@ -110,6 +119,7 @@ class Checkout {
                 return;
             }
 
+            console.log('Updating checkout summary with cart data...');
             // Update summary
             this.elements.subtotal.textContent = `$${cartData.subtotal.toFixed(2)}`;
             this.elements.shipping.textContent = `$${cartData.shipping.toFixed(2)}`;
