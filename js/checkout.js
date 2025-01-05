@@ -8,9 +8,14 @@ class Checkout {
 
     async init() {
         try {
+            // Wait for components to load first
+            await this.waitForComponents();
+            // Then wait for elements
             await this.waitForElements();
+            // Setup Stripe
             this.setupStripe();
-            this.loadCartSummary();
+            // Finally load cart summary
+            await this.loadCartSummary();
             this.bindEvents();
         } catch (error) {
             console.error('Error initializing checkout:', error);
@@ -18,7 +23,39 @@ class Checkout {
         }
     }
 
+    async waitForComponents() {
+        return new Promise((resolve, reject) => {
+            const checkComponents = () => {
+                const header = document.querySelector('.top-header');
+                const cartSidebar = document.querySelector('.cart-sidebar');
+                
+                console.log('Checking components:', {
+                    header: !!header,
+                    cartSidebar: !!cartSidebar,
+                    cartInstance: window.cartInstance?.initialized
+                });
+
+                if (header && cartSidebar && window.cartInstance?.initialized) {
+                    console.log('Components loaded and cart initialized');
+                    resolve();
+                } else {
+                    if (this.cartLoadAttempts >= this.maxCartLoadAttempts) {
+                        reject(new Error('Components failed to load'));
+                        return;
+                    }
+                    this.cartLoadAttempts++;
+                    setTimeout(checkComponents, 1000);
+                }
+            };
+
+            checkComponents();
+        });
+    }
+
     async waitForElements() {
+        // Reset attempt counter for elements check
+        this.cartLoadAttempts = 0;
+        
         return new Promise((resolve, reject) => {
             const checkElements = () => {
                 const elements = {
@@ -38,8 +75,11 @@ class Checkout {
                     .filter(([key, value]) => !value)
                     .map(([key]) => key);
                 
-                console.log('Attempt', this.cartLoadAttempts + 1, 'of', this.maxCartLoadAttempts);
-                console.log('Missing elements:', missingElements);
+                console.log('Checking elements:', {
+                    attempt: this.cartLoadAttempts + 1,
+                    maxAttempts: this.maxCartLoadAttempts,
+                    missing: missingElements
+                });
 
                 if (Object.values(elements).every(element => element)) {
                     console.log('All elements found');
@@ -59,7 +99,7 @@ class Checkout {
                         return;
                     }
                     this.cartLoadAttempts++;
-                    setTimeout(checkElements, 1000); // Increased delay between attempts
+                    setTimeout(checkElements, 1000);
                 }
             };
 
